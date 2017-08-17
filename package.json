@@ -1,10 +1,10 @@
 {
   "name": "ivantd",
-  "version": "1.0.0",
+  "version": "0.0.1-beta.2",
   "description": "Ant Design components built with Vue.js",
-  "author": "ruyang@fosun.com",
-  "private": true,
-  "main": "public/ivantd.main.js",
+  "author": "ruyangit@163.com",
+  "private": false,
+  "main": "public/ivantd.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -12,7 +12,8 @@
     "public:dev": "webpack --config build/webpack.public.dev.config.js",
     "public:prod": "webpack --config build/webpack.public.prod.config.js",
     "public": "npm run public:dev && npm run public:prod",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,10 @@
     }
   },
   "homepage": "https://github.com/ruyangit/ivantd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruyangit/ivantd/issues"
+  },
   "dependencies": {
     "async-validator": "^1.7.1",
     "core-js": "^2.4.1",

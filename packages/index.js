@@ -119,10 +119,11 @@ const components = {
     treeSelect,
 };
 
+// 注册全局方法
 message.install = function (Vue) {
     Vue.$message = Vue.prototype.$message = message;
 };
-
+// 注册全局方法
 notification.install = function (Vue) {
     Vue.$notification = Vue.prototype.$notification = notification;
 };
@@ -146,11 +147,6 @@ const install = function (Vue, opts = {}) {
         }
     }
 };
-
-// 注册全局方法
-// notification.install = function (Vue) {
-//     Vue.$notification = Vue.prototype.$notification = notification;
-// };
 
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {
