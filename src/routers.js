@@ -1,8 +1,32 @@
 export default [{
     path: '/',
     name: 'index',
-    //redirect: '/components/button',
+    // redirect: '/components/button',
     component: resolve => require(['./views/index.vue'], resolve),
+}, {
+    path: '/guide',
+    component: resolve => require(['./views/guide.vue'], resolve),
+    children: [
+        {
+            path: 'easy',
+            component: resolve => require(['./docs/zh-cn/easy.md'], resolve),
+        }, {
+            path: 'efficient',
+            component: resolve => require(['./docs/zh-cn/efficient.md'], resolve),
+        }, {
+            path: 'safety',
+            component: resolve => require(['./docs/zh-cn/safety.md'], resolve),
+        }, {
+            path: 'color',
+            component: resolve => require(['./docs/zh-cn/color.md'], resolve),
+        }, {
+            path: 'font',
+            component: resolve => require(['./docs/zh-cn/font.md'], resolve),
+        }, {
+            path: 'icon',
+            component: resolve => require(['./docs/zh-cn/icon.md'], resolve),
+        },
+    ],
 }, {
     path: '/components',
     component: resolve => require(['./views/components.vue'], resolve),

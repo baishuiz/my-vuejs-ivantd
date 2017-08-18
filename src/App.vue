@@ -11,10 +11,7 @@
                 <div id="nav">
                     <ul>
                         <li class="nav-item">
-                            <router-link active-class="nav-active" to="/guide">指南</router-link>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="javascript:;">设计规范</a>
+                            <router-link active-class="nav-active" to="/guide/easy">设计</router-link>
                         </li>
                         <li class="nav-item ">
                             <router-link active-class="nav-active" to="/components/start">组件</router-link>
