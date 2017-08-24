@@ -1,69 +1,95 @@
 <template>
-    <button :type="htmlType" :class="btnClassObj" :disabled="disabled" @click="handleClick">
-        <i class="anticon anticon-spin anticon-loading" v-if="loading"></i>
-        <i v-bind:class="'anticon anticon-' +icon" v-if="icon"></i>
-        <span v-if="$slots && $slots.default"><slot></slot></span>
-    </button>
+    <a role="button" :class="[btnClassObj]" :disabled="disabled" @click="handleClick($event)" @touchstart="handleTouch" @touchend="handleTouch">
+        <v-icon v-if="loading" name='loading' />
+        <v-icon v-if="icon" :name='icon' />
+        <span v-if="$slots && $slots.default">
+            <slot></slot>
+        </span>
+    </a>
 </template>
 <script lang="babel">
-    export default {
-        name: 'Button',
-        data: () => ({
-            prefixCls: 'ant-btn',
-            clicked: false,
-            clickTimer: null
-        }),
-        props: {
+export default {
+    name: 'Button',
+    data: () => ({
+        prefixCls: 'am-button',
+        clicked: false
+    }),
+    props: {
+        type: {
             type: String,
-            htmlType: {
-                type: String,
-                default: 'button'
-            },
-            icon: String,
-            shape: String,
-            size: String,
-            loading: {
-                type: Boolean,
-                default: false
-            },
-            ghost: {
-                type: Boolean,
-                default: false
-            },
-            disabled: {
-                type: Boolean,
-                default: false
-            }
+            default: 'primary'
+        }, //按钮类型
+        icon: String, //按钮带图标
+        inline: {
+            type: Boolean,
+            default: false
+        }, //是否设置为行内按钮
+        across: {
+            type: Boolean,
+            default: false
+        }, //是否设置为通栏展示
+        size: String, //按钮大小
+        loading: { //是否载入状态
+            type: Boolean,
+            default: false
         },
-        computed: {
-            btnClassObj() {
-                let {prefixCls, type, size, shape, loading, clicked, ghost} = this;
-                let btnClass = {};
-                let tmpSize = "";
-                if (size == "small") {
-                    tmpSize = "sm";
-                } else if (size == "large") {
-                    tmpSize = "lg";
+        ghost: { //设置幽灵背景
+            type: Boolean,
+            default: false
+        },
+        disabled: { //是否禁用
+            type: Boolean,
+            default: false
+        }
+    },
+    computed: {
+        btnClassObj() {
+            let {
+                prefixCls,
+                type,
+                size,
+                loading,
+                ghost,
+                icon,
+                disabled,
+                inline,
+                across,
+                clicked
+            } = this;
+            let btnClass = {};
+            btnClass['btn ' + prefixCls] = true;
+            if (disabled) {
+                btnClass[prefixCls + '-disabled'] = disabled;
+            } else {
+                if (loading) {
+                    btnClass[prefixCls + '-loading ' + prefixCls + '-icon'] = loading;
+                } else if (icon) {
+                    btnClass[prefixCls + '-icon'] = true;
+                } else {
+                    btnClass[prefixCls + '-' + type] = type;
                 }
-                btnClass[prefixCls] = true;
-                btnClass[prefixCls + '-' + type] = type;
-                btnClass[prefixCls + '-' + tmpSize] = size;
-                btnClass[prefixCls + '-' + shape] = shape;
-                btnClass[prefixCls + '-loading'] = loading;
-                btnClass[prefixCls + '-background-ghost'] = ghost;
-                btnClass[prefixCls + '-clicked'] = clicked;
-
-                return btnClass;
             }
+            if (size) {
+                btnClass[prefixCls + '-' + size] = size;
+            }
+            btnClass[prefixCls + '-ghost'] = ghost;
+            btnClass[prefixCls + '-inline'] = inline;
+            btnClass[prefixCls + '-across'] = across;
 
+            btnClass[prefixCls + '-active'] = clicked;
+
+            return btnClass;
+        }
+    },
+    methods: {
+        handleClick(event) {
+            this.$emit('click', event);
         },
-        methods: {
-            handleClick(evt) {
-                this.clicked = true;
-                if (this.clickTimer) clearTimeout(this.clickTimer);
-                this.clickTimer = setTimeout(() => this.clicked = false, 500);
-                this.$emit('click', evt);
+        handleTouch() {
+            if (!this.disabled) {
+                this.clicked = !this.clicked;
             }
         }
     }
+}
 </script>

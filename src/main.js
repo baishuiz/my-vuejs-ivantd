@@ -3,7 +3,6 @@ import VueRouter from 'vue-router';
 import 'highlight.js/styles/solarized-light.css';
 import App from './App';
 import routerMap from './routers';
-// import 'highlight.js/styles/color-brewer.css';
 import iVantd from '../packages';
 // import '../package/style/ivantd.css';
 // import iVantd from '../package/ivantd';
@@ -16,10 +15,12 @@ Vue.use(iVantd, { locale });
 Vue.use(components);
 
 window.Vue = Vue;
+
 Vue.config.productionTip = false;
 
 window.router = new VueRouter({
-    mode: 'hash',
+    // mode: 'hash',
+    mode: 'history',
     base: __dirname,
     routes: routerMap,
 });

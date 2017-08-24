@@ -1,5 +1,4 @@
 import "./style/index.less"
-import row from './row'
-import col from './col'
+import grid from './grid.vue'
 
-export {col,row}
+export default grid;

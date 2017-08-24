@@ -1,23 +1,31 @@
-import codeBox from './code-box.vue'
+import code from './code.vue'
+import footer from './footer.vue'
+import header from './header.vue'
+import menu from './menu.vue'
+
+const componentNamePrefix = 'v'
 
 const compnents = {
-  codeBox,
+  code,
+  footer,
+  header,
+  menu
 }
 
 for (let item of Object.values(compnents)) {
   if (!item.install && item.name) {
-    item.install = function (Vue) {
-      Vue.component(item.name, item);
+    item.install = function (Vue, prefix = componentNamePrefix) {
+      Vue.component(prefix + item.name, item);
     };
   }
 }
 
-const install = function (Vue) {
+const install = function (Vue, opts = {}) {
   if (install.installed) return;
 
   for (let item of Object.values(compnents)) {
     if (item.install) {
-      Vue.use(item);
+      Vue.use(item, opts.prefix);
     }
   }
 }

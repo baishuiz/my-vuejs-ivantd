@@ -1,3 +1,4 @@
-import vIcon from './icon.vue'
+import "./style/index.less"
+import icon from './icon.vue'
 
-export default vIcon
+export default icon;

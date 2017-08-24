@@ -1,0 +1,16 @@
+{
+    "headerNav": [
+        {
+            "name": "体验",
+            "path": "/demo"
+        },
+        {
+            "name": "设计指引",
+            "path": "/guide/easy"
+        },
+        {
+            "name": "组件",
+            "path": "/components/start"
+        }
+    ]
+}

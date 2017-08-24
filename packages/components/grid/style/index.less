@@ -1,108 +1,114 @@
-@import "../../../style/themes/default";
-@import "../../../style/mixins/index";
-@import "./mixin";
+@import '../../style/mixins';
+@import '../../style/themes/default';
 
-// Grid system
-.@{ant-prefix}-row {
-  .make-row();
-  display: block;
-}
+@flexPrefixCls: am-flexbox;
+@gridPrefixCls: am-grid;
 
-.@{ant-prefix}-row-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* flexbox */
+.@{gridPrefixCls} {
+  .@{flexPrefixCls} {
+    background: @fill-base;
 
-  &:before,
-  &:after {
-    display: flex;
+    .@{flexPrefixCls}-item {
+      margin-left: 0;
+
+      &.@{gridPrefixCls}-item {
+        position: relative;
+
+        &:active {
+          background-color: @fill-tap;
+        }
+        &.@{gridPrefixCls}-null-item:active {
+         background-color: @fill-base;
+        }
+      }
+
+      &.@{gridPrefixCls}-item:before {
+        display: block;
+        content: ' ';
+        padding-bottom: 100%;
+      }
+
+      .@{gridPrefixCls}-item-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+        .@{gridPrefixCls}-item-inner-content {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .@{gridPrefixCls}-icon {
+            margin-top: @v-spacing-md;
+            width: 28%;
+            height: 28%;
+          }
+
+          .@{gridPrefixCls}-text {
+            margin-top: @v-spacing-md;
+            font-size: @font-size-caption-sm;
+            color: @color-text-base;
+            text-align: center;
+          }
+
+          &.column-num-3 {
+            .@{gridPrefixCls}-text {
+              font-size: @font-size-caption;
+            }
+          }
+
+          &.column-num-2 {
+            .@{gridPrefixCls}-text {
+              margin-top: @v-spacing-lg;
+              font-size: 36px;
+            }
+          }
+        }
+      }
+    }
   }
-}
 
-// x轴原点
-.@{ant-prefix}-row-flex-start {
-  justify-content: flex-start;
-}
+  &.@{gridPrefixCls}-line {
+    .@{flexPrefixCls} {
+      position: relative;
+      .hairline-bottom(@border-color-base);
 
-// x轴居中
-.@{ant-prefix}-row-flex-center {
-  justify-content: center;
-}
+      &:last-child {
+        .hairline-remove-right-bottom();
+      }
 
-// x轴反方向
-.@{ant-prefix}-row-flex-end {
-  justify-content: flex-end;
-}
+      .@{flexPrefixCls}-item {
+        position: relative;
+        .hairline-right(@border-color-base);
 
-// x轴平分
-.@{ant-prefix}-row-flex-space-between {
-  justify-content: space-between;
-}
+        &:last-child {
+          .hairline-remove-right-bottom();
+        }
+      }
+    }
 
-// x轴有间隔地平分
-.@{ant-prefix}-row-flex-space-around {
-  justify-content: space-around;
-}
+    .@{gridPrefixCls}-carousel-page {
+      border-right: @border-width-sm solid @border-color-base;
 
-// 顶部对齐
-.@{ant-prefix}-row-flex-top {
-  align-items: flex-start;
-}
+      &:first-child {
+        border-left: @border-width-sm solid @border-color-base;
+      }
+    }
+  }
 
-// 居中对齐
-.@{ant-prefix}-row-flex-middle {
-  align-items: center;
-}
+  .am-carousel {
+    .am-carousel-wrap-dot > span {
+      background: #dcdee3;
+    }
 
-// 底部对齐
-.@{ant-prefix}-row-flex-bottom {
-  align-items: flex-end;
-}
-
-.@{ant-prefix}-col {
-  position: relative;
-  display: block;
-}
-
-.make-grid-columns();
-.make-grid();
-
-// Extra small grid
-//
-// Columns, offsets, pushes, and pulls for extra small devices like
-// smartphones.
-
-.make-grid(-xs);
-
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-
-@media (min-width: @screen-sm-min) {
-  .make-grid(-sm);
-}
-
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-
-@media (min-width: @screen-md-min) {
-  .make-grid(-md);
-}
-
-// Large grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-
-@media (min-width: @screen-lg-min) {
-  .make-grid(-lg);
-}
-
-// Extra Large grid
-//
-// Columns, offsets, pushes, and pulls for the full hd device range.
-
-@media (min-width: @screen-xl-min) {
-  .make-grid(-xl);
+    .am-carousel-wrap-dot-active > span {
+      background: #0ae;
+    }
+  }
 }
