@@ -24,10 +24,10 @@ export default {
                 prefixCls,
                 size
             } = this;
-            let className = {};
-            className[prefixCls] = true;
-            className[prefixCls + '-' + size] = size;
-            return className;
+            let classObj = {};
+            classObj[prefixCls] = true;
+            classObj[prefixCls + '-' + size] = size;
+            return classObj;
         },
     },
 }

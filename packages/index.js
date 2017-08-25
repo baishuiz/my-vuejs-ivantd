@@ -10,7 +10,9 @@ import wingBlank from './components/wing-blank';
 
 import grid from './components/grid';
 
-import locale from './locale';
+import list from './components/list';
+
+// import locale from './locale';
 import { version } from '../package.json';
 
 const components = {
@@ -21,6 +23,8 @@ const components = {
     whiteSpace,
     wingBlank,
     grid,
+    list,
+    listItem: list.item,
 };
 
 
@@ -34,8 +38,8 @@ for (const item of Object.values(components)) {
 
 const install = function (Vue, opts = {}) {
     if (install.installed) return;
-    locale.use(opts.locale);
-    locale.i18n(opts.i18n);
+    // locale.use(opts.locale);
+    // locale.i18n(opts.i18n);
 
     for (const item of Object.values(components)) {
         if (item.install) {

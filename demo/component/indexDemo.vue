@@ -15,7 +15,9 @@
                         <div class="am-demo-category">
                             <div class="am-demo-category-name" v-text="i1.name"></div>
                             <div class="am-demo-category-arrow">
-                                <span><v-icon name="down" /></span>
+                                <span>
+                                    <v-icon name="down" />
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -58,9 +60,12 @@ const dataList = [{
     children: [{
         name: 'Grid 宫格',
         path: 'grid',
-    },{
+    }, {
         name: 'Icon 图标',
         path: 'icon',
+    }, {
+        name: 'List 列表',
+        path: 'list',
     }]
 }]
 export default {

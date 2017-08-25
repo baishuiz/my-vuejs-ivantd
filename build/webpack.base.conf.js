@@ -188,7 +188,22 @@ var baseWebpackConfig = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // {
+      //   test: /\.less$/,
+      //   // loader: 'style-loader!css-loader!sass-loader!postcss-loader'
+      //   use: [
+      //     { loader: 'style-loader' },
+      //     { loader: 'css-loader' },
+      //     {
+      //       loader: 'postcss-loader',
+      //       options: {
+      //         plugins: () => [require('postcss-pxtorem')({remUnit: 34.5})],
+      //       },
+      //     },
+      //     'less-loader'
+      //   ]
+      // },
     ]
   }
 }

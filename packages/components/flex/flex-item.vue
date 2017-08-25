@@ -21,10 +21,10 @@ export default {
                 prefixCls,
                 className
             } = this;
-            let flexItemClass = {};
-            flexItemClass[prefixCls + '-item'] = true;
-            flexItemClass[className] = className;
-            return flexItemClass;
+            let classObj = {};
+            classObj[prefixCls + '-item'] = true;
+            classObj[className] = className;
+            return classObj;
         },
     },
     methods: {}

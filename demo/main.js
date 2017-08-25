@@ -3,11 +3,11 @@ import VueRouter from 'vue-router';
 import App from './App';
 import routerMap from './routers';
 import iVantd from '../packages';
-import locale from '../packages/locale/lang/zh-CN';
+// import locale from '../packages/locale/lang/zh-CN';
 import './static/common.css';
 
 Vue.use(VueRouter);
-Vue.use(iVantd, { locale });
+Vue.use(iVantd);
 
 window.Vue = Vue;
 

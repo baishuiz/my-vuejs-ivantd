@@ -41,7 +41,8 @@ export default {
         hasLine: { //是否有边框
             type: Boolean,
             default: true
-        }
+        },
+        className:String
     },
     comments: {
         Flex
@@ -50,12 +51,14 @@ export default {
         gridClassName() {
             let {
                 prefixCls,
-                hasLine
+                hasLine,
+                className
             } = this;
-            let className = {};
-            className[prefixCls] = true;
-            className[prefixCls + '-line'] = hasLine;
-            return className;
+            let classObj = {};
+            classObj[prefixCls] = true;
+            classObj[prefixCls + '-line'] = hasLine;
+            classObj[className] = className;
+            return classObj;
         }
     },
     mounted() {

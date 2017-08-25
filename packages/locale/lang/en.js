@@ -2,10 +2,10 @@ export default {
     select: {
         notFoundContent: 'not found',
         placeholder: 'plese select',
-        loadingText: 'loding...'
+        loadingText: 'loding...',
     },
     timePicker: {
-        placeholder: 'select time'
+        placeholder: 'select time',
     },
     datePicker: {
         placeholder: 'select date',
@@ -25,20 +25,20 @@ export default {
     modal: {
         okText: 'OK',
         cancelText: 'Cancel',
-        justOkText: 'Got it!'
+        justOkText: 'Got it!',
     },
     popconfirm: {
         okText: 'Yes',
-        cancelText: 'No'
+        cancelText: 'No',
     },
     input: {
-        placeholder: 'plese enter'
+        placeholder: 'plese enter',
     },
     transfer: {
         searchPlaceholder: 'Search here',
-        notFoundContent: 'Not Found'
+        notFoundContent: 'Not Found',
     },
     treeSelect: {
         placeholder: 'please select',
     },
-}
+};

@@ -26,4 +26,8 @@ export default [{
     path: '/icon',
     name: 'icon',
     component: resolve => require(['./component/iconDemo.vue'], resolve),
+}, {
+    path: '/list',
+    name: 'list',
+    component: resolve => require(['./component/listDemo.vue'], resolve),
 }];

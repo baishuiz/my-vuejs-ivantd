@@ -32,14 +32,14 @@
                     alignContent,
                     style,
                 } = this;
-                let flexClass = {};
-                flexClass[prefixCls] = true;
-                flexClass[prefixCls + '-dir-' + direction] = direction;
-                flexClass[prefixCls + '-' + wrap] = wrap;
-                flexClass[prefixCls + '-justify-' + justify] = justify;
-                flexClass[prefixCls + '-align-' + align] = align;
-                flexClass[prefixCls + '-align-content-' + align] = alignContent;
-                return flexClass;
+                let classObj = {};
+                classObj[prefixCls] = true;
+                classObj[prefixCls + '-dir-' + direction] = direction;
+                classObj[prefixCls + '-' + wrap] = wrap;
+                classObj[prefixCls + '-justify-' + justify] = justify;
+                classObj[prefixCls + '-align-' + align] = align;
+                classObj[prefixCls + '-align-content-' + align] = alignContent;
+                return classObj;
             },
         },
         methods: {}
