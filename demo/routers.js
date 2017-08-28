@@ -30,4 +30,16 @@ export default [{
     path: '/list',
     name: 'list',
     component: resolve => require(['./component/listDemo.vue'], resolve),
+}, {
+    path: '/progress',
+    name: 'progress',
+    component: resolve => require(['./component/progressDemo.vue'], resolve),
+}, {
+    path: '/activityIndicator',
+    name: 'activityIndicator',
+    component: resolve => require(['./component/activityIndicatorDemo.vue'], resolve),
+}, {
+    path: '/toast',
+    name: 'toast',
+    component: resolve => require(['./component/toastDemo.vue'], resolve),
 }];

@@ -67,6 +67,18 @@ const dataList = [{
         name: 'List 列表',
         path: 'list',
     }]
+}, {
+    name: '操作反馈 Feedback',
+    children: [{
+        name: 'Progress 进度条',
+        path: 'progress',
+    },{
+        name: 'ActivityIndicator 活动指示器',
+        path: 'activityIndicator',
+    },{
+        name: 'Toast 轻提示',
+        path: 'toast',
+    }]
 }]
 export default {
     name: 'IndexDemo',

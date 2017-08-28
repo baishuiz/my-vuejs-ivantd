@@ -10,11 +10,13 @@
                     </div>
                 </div>
             </v-flex-item>
-            <v-flex-item v-if="i1.length!=columnNum" :className="prefixCls+'-item '+prefixCls+'-null-item'" v-for="f in (columnNum-i1.length)" :key="f">
-                <div :class="prefixCls+'-item-content'">
-                    <div :class="prefixCls+'-item-inner-content'"></div>
-                </div>
-            </v-flex-item>
+            <template v-if="i1.length!=columnNum">
+                <v-flex-item  :className="prefixCls+'-item '+prefixCls+'-null-item'" v-for="f in (columnNum-i1.length)" :key="f">
+                    <div :class="prefixCls+'-item-content'">
+                        <div :class="prefixCls+'-item-inner-content'"></div>
+                    </div>
+                </v-flex-item>
+            </template>
         </v-flex>
     </div>
 </template>
