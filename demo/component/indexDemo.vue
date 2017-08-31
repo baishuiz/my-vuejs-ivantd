@@ -49,6 +49,12 @@ const dataList = [{
         name: 'WingBlank 两翼留白',
         path: 'wingBlank',
     }]
+},{
+    name: '导航 Navigation',
+    children: [{
+        name: 'TabBar 标签栏',
+        path: 'tabbar',
+    }]
 }, {
     name: '数据录入 Data Entry',
     children: [{
@@ -56,8 +62,11 @@ const dataList = [{
         path: 'button',
     }]
 }, {
-    name: '数据展示 Data Entry',
+    name: '数据展示 Data Display',
     children: [{
+        name: 'Badge 微标数',
+        path: 'badge',
+    }, {
         name: 'Grid 宫格',
         path: 'grid',
     }, {
@@ -72,17 +81,17 @@ const dataList = [{
     children: [{
         name: 'Progress 进度条',
         path: 'progress',
-    },{
+    }, {
         name: 'ActivityIndicator 活动指示器',
         path: 'activityIndicator',
-    },{
+    }, {
         name: 'Toast 轻提示',
         path: 'toast',
     }]
 }]
 export default {
     name: 'IndexDemo',
-    data: function () {
+    data: function() {
         return {
             dataList: dataList
         }

@@ -1,37 +1,58 @@
 <template>
-    <div class="home-main">
-        <div class="home-iframe">
-            <div style="width: 377px; height: 620px;">
-                <div class="demo-preview-wrapper">
-                    <div class="demo-preview-header">
-                        <div class="demo-preview-statbar"><img width="350Px" alt="presentation" src="https://os.alipayobjects.com/rmsportal/VfVHYcSUxreetec.png" style="margin: 0px 2px;"></div>
-                        <div style="height: 40px;">
-                            <div class="url-box">/demo.html</div>
-                        </div>
+        <div class="home-main">
+            <div class="container">
+                <div class="details">
+                    <div><img src="../assets/components_logo.png" alt="componentslogo" /></div>
+                    <div class="component"><img src="../assets/components.png" alt="components" /></div>
+                    <p>设计、前端高效协同，快速搭建移动端组件库</p>
+                    <div class="WeChat">
+                        <qrcode :value="qrcodeValue" :options="qrcodeOptions"></qrcode>
                     </div>
-                    <section class="code-box-demo code-box-demo-preview">
-                        <iframe id="demoFrame" title="antd-mobile" name="demoFrame" src="/demo.html" style="width: 377px; height: 548px; border-top: none; border-right: 1px solid rgb(247, 247, 247); border-bottom: 1px solid rgb(247, 247, 247); border-left: 1px solid rgb(247, 247, 247); border-image: initial; box-shadow: rgb(235, 235, 235) 0px 2px 4px;"></iframe>
-                    </section>
+                </div>
+                <div class="phone" ref="phone">
+                    <div class="doc-simulator">
+                        <div class="doc-simulator__nav">
+                            <div class="doc-simulator__url">http://10.166.3.200:8080/demo.html</div>
+                            <div class="doc-simulator__reload"></div>
+                        </div>
+                        <iframe src="http://10.166.3.200:8080/demo.html" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="banner-text-wrapper">
-            <h2>移动端设计指南 &amp; 前端框架</h2>
-            <div>
-                设计、前端高效协同，快速搭建移动端组件库
+            <div class="cards">
+                <ul>
+                    <li>
+                        <img src="../assets/diamond.png" alt="" />
+                        <div class="card">SKETCH 组件下载</div>
+                    </li>
+                    <li>
+                        <img src="../assets/palette.png" alt="" />
+                        <div class="card">移动设计规范文档下载</div>
+                    </li>
+                    <li>
+                        <img src="../assets/exploit.png" alt="" />
+                        <div class="card">前端开发文档下载</div>
+                    </li>
+                </ul>
             </div>
-            <div class="start-button-wrap">
-                <a href="javascript:;">
-                    <i class="anticon anticon-smile-circle"></i>
-                    开始探索
-                </a>
-            </div>
         </div>
-    </div>
 </template>
 
-<script lang="less">
-export default {}
+<script>
+import qrcode from '../components/qrcode.js';
+export default {
+    data() {
+        return {
+            qrcodeValue: 'http://10.166.3.200:8080/demo.html',
+            qrcodeOptions: {
+                size: 164
+            }
+        }
+    },
+    components: {
+        qrcode
+    }
+}
 </script>
 
 <style lang="less">

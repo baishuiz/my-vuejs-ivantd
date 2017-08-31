@@ -14,6 +14,7 @@ import list from './components/list';
 import progress from './components/progress';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
+import badge from './components/badge';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -31,6 +32,7 @@ const components = {
     progress,
     toast,
     activityIndicator,
+    badge,
 };
 
 
@@ -69,19 +71,4 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-export {
-    version,
-    button,
-    icon,
-    flex,
-    whiteSpace,
-    wingBlank,
-    grid,
-    list,
-    progress,
-};
-
-export default {
-    version,
-    install,
-}
+export default { install, version, ...components }

@@ -1,8 +1,8 @@
 {
     "headerNav": [
         {
-            "name": "体验",
-            "path": "/demo"
+            "name": "首页",
+            "path": "/"
         },
         {
             "name": "设计指引",

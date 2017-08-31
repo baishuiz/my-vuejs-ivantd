@@ -2,6 +2,7 @@ import code from './code.vue'
 import footer from './footer.vue'
 import header from './header.vue'
 import menu from './menu.vue'
+// import nav from './nav.vue'
 
 const componentNamePrefix = 'v'
 
@@ -9,7 +10,8 @@ const compnents = {
   code,
   footer,
   header,
-  menu
+  menu,
+  // nav
 }
 
 for (let item of Object.values(compnents)) {

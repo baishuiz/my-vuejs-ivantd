@@ -53,9 +53,9 @@ export default {
     margin: 0.16rem 0;
 }
 .am-button-shadow-a{
-    box-shadow: 0 11px 16px 0 rgba(233,188,93,0.50);
+    box-shadow: 0 .08rem .10rem 0 rgba(233,188,93,0.50);
 }
 .am-button-shadow-b{
-    box-shadow: 0 11px 16px 0 rgba(77,137,247,0.40);
+    box-shadow: 0 .08rem .10rem 0 rgba(77,137,247,0.40);
 }
 </style>

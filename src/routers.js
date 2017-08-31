@@ -4,8 +4,8 @@ export default [
         name: 'index',
         component: resolve => require(['./views/index.vue'], resolve),
     }, {
-        path: '/demo',
-        name: 'demo',
+        path: '*',
+        name: '404',
         redirect: '/',
     }, {
         path: '/guide',
@@ -27,15 +27,15 @@ export default [
             }, {
                 path: 'color',
                 name: 'color',
-                component: resolve => require(['./docs/zh-cn/start.md'], resolve),
+                component: resolve => require(['./docs/zh-cn/color.md'], resolve),
             }, {
                 path: 'font',
                 name: 'font',
-                component: resolve => require(['./docs/zh-cn/start.md'], resolve),
+                component: resolve => require(['./docs/zh-cn/font.md'], resolve),
             }, {
                 path: 'icon',
                 name: 'icon',
-                component: resolve => require(['./docs/zh-cn/start.md'], resolve),
+                component: resolve => require(['./docs/zh-cn/icon.md'], resolve),
             },
         ],
     }, {

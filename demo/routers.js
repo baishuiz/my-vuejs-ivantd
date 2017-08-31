@@ -42,4 +42,12 @@ export default [{
     path: '/toast',
     name: 'toast',
     component: resolve => require(['./component/toastDemo.vue'], resolve),
+}, {
+    path: '/badge',
+    name: 'badge',
+    component: resolve => require(['./component/badgeDemo.vue'], resolve),
+}, {
+    path: '/tabbar',
+    name: 'tabbar',
+    component: resolve => require(['./component/taBbarDemo.vue'], resolve),
 }];

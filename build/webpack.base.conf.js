@@ -55,7 +55,7 @@ const md = require('markdown-it')('default', {
   level: 2,
   slugify: slugify,
   permalink: true,
-  permalinkBefore: true,
+  // permalinkBefore: true,
   permalinkSymbol: '#'
 }).use(require('markdown-it-container'), 'demo', {
 
@@ -162,12 +162,11 @@ var baseWebpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('packages'), resolve('test')]
+        include: [resolve('src'), resolve('packages'), resolve('demo')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
-        exclude: [resolve('packages/icon/style/assets/')],
         options: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
@@ -189,21 +188,6 @@ var baseWebpackConfig = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
-      // {
-      //   test: /\.less$/,
-      //   // loader: 'style-loader!css-loader!sass-loader!postcss-loader'
-      //   use: [
-      //     { loader: 'style-loader' },
-      //     { loader: 'css-loader' },
-      //     {
-      //       loader: 'postcss-loader',
-      //       options: {
-      //         plugins: () => [require('postcss-pxtorem')({remUnit: 34.5})],
-      //       },
-      //     },
-      //     'less-loader'
-      //   ]
-      // },
     ]
   }
 }
