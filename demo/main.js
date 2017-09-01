@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import App from './App';
 import routerMap from './routers';
 import iVantd from '../packages';
+import '../packages/style/index.less';
 // import locale from '../packages/locale/lang/zh-CN';
 
 Vue.use(VueRouter);
