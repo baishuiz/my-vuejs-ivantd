@@ -1,6 +1,6 @@
-import "./style/index.less"
-import flex from './flex.vue'
-import flexItem from './flex-item.vue'
+import './style/index.less';
+import flex from './flex';
+import flexItem from './flex-item';
 
 flex.item = flexItem;
 

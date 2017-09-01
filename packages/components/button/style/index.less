@@ -1,5 +1,5 @@
-@import url('../../style/mixins');
-@import url('../../style/themes/default');
+@import '../../style/mixins';
+@import '../../style/themes/default';
 
 @buttonPrefixCls: am-button;
 
@@ -47,7 +47,7 @@
   &-primary {
     color: @color-text-base-inverse;
     background-color: @button-fill-primary;
-    // border: @border-width-sm solid @button-fill-primary;
+    border: @border-width-sm solid @button-fill-primary;
     // &:active, // uc browser not work normal
     &.@{buttonPrefixCls}-active {
       background-color: @button-fill-primary-tap;
@@ -61,6 +61,7 @@
   &-blue {
     color: @color-text-base-inverse;
     background-color: @button-fill-blue;
+    border: @border-width-sm solid @button-fill-blue;
     &.@{buttonPrefixCls}-active {
       background-color: @button-fill-blue-tap;
     }
@@ -76,6 +77,7 @@
     border: @border-width-sm solid @button-ghost-fill;
     // &:active, // uc browser not work normal
     &.@{buttonPrefixCls}-active {
+      color:fade(@button-ghost-fill, 60%);
       background-color: transparent;
       border-color: @button-ghost-fill-tap;
     }

@@ -1,5 +1,4 @@
 import './style/index.less';
-// import progress from './progress.vue';
 import Progress from './progress.js';
 
 let progressInstance;

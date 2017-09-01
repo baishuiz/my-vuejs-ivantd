@@ -1,4 +1,4 @@
-import "./style/index.less"
-import grid from './grid.vue'
+import './style/index.less';
+import grid from './grid';
 
 export default grid;

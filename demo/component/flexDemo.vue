@@ -123,4 +123,5 @@ export default {
     font-size: .28rem;
     padding: 30px 0 18px 0;
 }
+
 </style>

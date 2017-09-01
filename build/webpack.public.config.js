@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         'ivantd': './packages/index.js',
-        style: './packages/index.js'
+       // style: './packages/index.js'
     },
     output: {
         path: path.resolve(__dirname, '../public'),
@@ -37,7 +37,7 @@ module.exports = {
             use: [
                 'style-loader',
                 'css-loader',
-                'autoprefixer-loader'
+                'postcss-loader'
             ]
         }, { 
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, 
