@@ -1,15 +1,10 @@
-<template lang="html">
-    <div class="main-wrapper page-container">
-        <div class="ant-row">
-            <div class="aside-container ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-4">
-                <v-menu mode="inline" :data="menuData" :expand="true">
-                    <template scope="{data}">
-                            <a v-if="data.href" :href="data.href" style="display:inline" :target="data.target">{{data.name}}</a>
-                            <router-link v-else :to="data.link" style="display:inline" :target="data.target">{{data.name}}</router-link>
-</template>
-                </v-menu>
+<template>
+    <div class="doc-content-wrapper" ref='doc'>
+        <div class="doc-content-row">
+            <div class="doc-content-aside">
+                <v-nav :data="menuData"></v-nav>
             </div>
-            <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-20">
+            <div class="doc-content">
                 <router-view keep-alive class="markdown"></router-view>
             </div>
         </div>
@@ -17,6 +12,7 @@
 </template>
 
 <script>
+    import v from '../../package.json'
     export default {
         data: () => ({
             menuData: [{
@@ -24,59 +20,109 @@
                 children: [{
                     name: '起步',
                     link: {
-                        name: 'start'
+                        path: 'start'
                     },
                 }, {
-                    name: '全局CSS样式',
+                    name: '快速上手',
                     link: {
-                        name: 'css'
+                        path: 'css'
                     },
                 }, {
-                    name: 'Polyfill',
+                    name: '国际化',
                     link: {
-                        name: 'polyfill'
+                        path: 'polyfill'
+                    },
+                }, {
+                    name: '组件预览',
+                    link: {
+                        path: 'contribute'
                     },
                 }, {
                     name: '参与贡献',
                     link: {
-                        name: 'contribute'
+                        path: 'contribute'
                     },
                 }],
             }, {
                 name: '更新日志',
-                href: 'https://github.com/FE-Driver/vantd/releases',
-                target: '_blank',
+                href: 'https://github.com/ruyangit/ivantd/releases',
+                update: true,
+                version: v.version
             }, {
-                name: 'Components',
+                name: '组件',
                 groups: [{
-                    groupName: 'General',
+                    groupName: '布局 Layout',
                     list: [{
-                        name: 'Button 按钮',
+                        name: 'Layout 基础布局',
                         link: {
-                            name: 'button'
+                            path: 'flex'
                         },
-                    }, {
-                        name: 'Icon 图标',
+                    },{
+                        name: 'WhiteSpace 上下留白',
                         link: {
-                            name: 'icon'
+                            path: 'whiteSpace'
+                        },
+                    },{
+                        name: 'WingBlank 两翼留白',
+                        link: {
+                            path: 'wingBlank'
                         },
                     }],
                 }, {
-                    groupName: 'Layout',
+                    groupName: '导航 Navigation',
                     list: [{
-                        name: 'Grid 栅格',
+                        name: 'TabBar 标签栏',
                         link: {
-                            name: 'grid'
+                            path: 'tabbar'
                         },
-                    }, {
-                        name: 'Layout 布局',
+                    }],
+                }, {
+                    groupName: '数据录入 Data Entry',
+                    list: [{
+                        name: 'Button 按钮',
                         link: {
-                            name: 'layout'
+                            path: 'button'
                         },
-                    }, {
-                        name: 'MorePanel 更多条件',
+                    }],
+                }, {
+                    groupName: '数据展示 Data Display',
+                    list: [{
+                        name: 'Badge 微标数',
                         link: {
-                            name: 'morePanel'
+                            path: 'badge'
+                        },
+                    },{
+                        name: 'Grid 宫格',
+                        link: {
+                            path: 'grid'
+                        },
+                    },{
+                        name: 'Icon 图标',
+                        link: {
+                            path: 'icon'
+                        },
+                    },{
+                        name: 'List 列表',
+                        link: {
+                            path: 'list'
+                        },
+                    }],
+                }, {
+                    groupName: '操作反馈 Feedback',
+                    list: [{
+                        name: 'Progress 进度条',
+                        link: {
+                            path: 'progress'
+                        },
+                    },{
+                        name: 'ActivityIndicator 活动指示器',
+                        link: {
+                            path: 'activityIndicator'
+                        },
+                    },{
+                        name: 'Toast 轻提示',
+                        link: {
+                            path: 'toast'
                         },
                     }],
                 }],

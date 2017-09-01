@@ -1,17 +1,15 @@
-import code from './code.vue'
-import footer from './footer.vue'
-import header from './header.vue'
-import menu from './menu.vue'
-// import nav from './nav.vue'
+import code from './code';
+import footer from './footer';
+import header from './header';
+import nav from './nav';
 
-const componentNamePrefix = 'v'
+const componentNamePrefix = 'v';
 
 const compnents = {
   code,
   footer,
   header,
-  menu,
-  // nav
+  nav
 }
 
 for (let item of Object.values(compnents)) {

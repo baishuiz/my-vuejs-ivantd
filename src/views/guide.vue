@@ -54,30 +54,7 @@
                                         </ul>
                                     </li>
                                 </ul> -->
-                <ul>
-                    <li class="nav-item" v-for="(item,index) in menuData" :key="index">
-                        <router-link :to="item.link.path" v-if="item.link" :class="['at',{'active':$route.path==item.link.path}]">{{item.name}}</router-link>
-                        <a class="at" v-else-if="item.href" target="_blank">{{item.name}}</a>
-                        <a v-else>{{item.name}}</a>
-                        <template v-if="item.children">
-                            <ul>
-                                <li class="nav-sub-item" v-for="(child,c) in item.children" :key="c">
-                                    <router-link :to="child.link.path">{{child.name}}</router-link>
-                                </li>
-                            </ul>
-                        </template>
-                        <template v-if="item.groups">
-                            <div v-for="(group,g) in item.groups" :key="g">
-                                <div class="nav-group-title">{{group.groupName}}</div>
-                                <ul>
-                                    <li class="nav-sub-item" v-for="(child,c) in group.list" :key="c">
-                                        <router-link :to="child.link.path">{{child.name}}</router-link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </template>
-                    </li>
-                </ul>
+                <v-nav :data="menuData"></v-nav>
             </div>
             <div class="doc-content">
                 <router-view keep-alive class="markdown"></router-view>
