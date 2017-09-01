@@ -1,4 +1,4 @@
-import "./style/index.less"
-import button from './button.vue'
+import './style/index.less';
+import button from './button';
 
 export default button;

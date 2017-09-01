@@ -1,0 +1,95 @@
+.am-demo-page {
+  .am-demo-hd {
+    height: 2.93rem;
+    position: relative;
+    overflow: hidden;
+    .am-demo-title,
+    .am-demo-subtitle {
+      text-align: left;
+      padding-left: .53rem;
+    }
+    .am-demo-title {
+      color: #3d3d3d;
+      padding-top: .80rem;
+      font-size: .60rem;
+      font-weight: normal;
+    }
+    .am-demo-subtitle {
+      font-size: .26rem;
+      color: #3d3d3d;
+      font-weight: normal;
+    }
+  }
+  .am-demo-bd {
+    .am-list {
+      margin: 0 .32rem .24rem;
+      background-color: white;
+      border-radius: .04rem;
+      .am-list-header {
+        padding: 0;
+        padding-left: .48rem;
+        height: 1.40rem;
+        line-height: 1.40rem;
+        color: #404040;
+        font-size: .32rem;
+      }
+      .am-list-body {
+        border-top: none;
+        &:after {
+          display: none;
+        }
+      }
+      .am-list-item {
+        padding-left: .48rem;
+        .am-list-content {
+          color: #666;
+          font-size: .28rem;
+        }
+      }
+      &.category-closed {
+        .am-list-header {
+          position: relative;
+        }
+        .am-list-body {
+          display: none;
+        }
+      }
+    }
+  }
+  .am-demo-category {
+    display: flex;
+    &-name {
+      flex: 1;
+    }
+    &-arrow {
+      width: 1rem;
+      text-align: center;
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+      span {
+        margin-top: .10rem;
+        display: inline-block;
+        color: #c7c7cc;
+      }
+    }
+  }
+}
+
+.category-open .am-demo-category .am-demo-category-arrow {
+  transform: rotate(-180deg);
+}
+
+.hide {
+  display: none!important;
+}
+.show {
+  display: block!important;
+}
+
+html, body {
+  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial;
+}
+
+.nav-arrow-down {
+  transform: scale(0.6);
+}

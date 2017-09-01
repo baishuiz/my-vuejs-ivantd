@@ -1,5 +1,5 @@
 import 'normalize.css/normalize.css';
-import './components/style/index.less';
+import './style/index.less';
 import config from './utils/config';
 
 import button from './components/button';

@@ -1,4 +1,3 @@
-import "./style/index.less"
-import tabBar from './tab-bar.vue'
+import tabBar from './tab-bar';
 
 export default tabBar;

@@ -1,4 +1,4 @@
-import "./style/index.less"
-import wingBlank from './wing-blank.vue'
+import './style/index.less';
+import wingBlank from './wing-blank';
 
 export default wingBlank;

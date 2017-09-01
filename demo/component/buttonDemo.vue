@@ -25,9 +25,9 @@
                         </v-flex>
                         <v-flex align="middle">
                             <v-button inline style="margin-right: 0.08rem;">inline</v-button>
-                            <v-button lnline ghost size="sm" style="margin-right: 0.08rem;"  radius="s">inline</v-button>
-                            <v-button lnline size="md" radius="s" style="margin-right: 0.08rem;" >inline</v-button>
-                            <v-button lnline size="lg" radius="s">inline</v-button>
+                            <v-button inline ghost size="sm" style="margin-right: 0.08rem;"  radius="s">inline</v-button>
+                            <v-button inline size="md" radius="s" style="margin-right: 0.08rem;" >inline</v-button>
+                            <v-button inline size="lg" radius="s">inline</v-button>
                         </v-flex>
                         <!-- <v-button loading>primary button</v-button> -->
                         <!-- <v-button loading>primary button</v-button> -->

@@ -4,7 +4,7 @@
                 <div class="details">
                     <div><img src="../assets/components_logo.png" alt="componentslogo" /></div>
                     <div class="component"><img src="../assets/components.png" alt="components" /></div>
-                    <p>设计、前端高效协同，快速搭建移动端组件库</p>
+                    <p class="fte">设计、前端高效协同，快速搭建移动端组件库</p>
                     <div class="WeChat">
                         <qrcode :value="qrcodeValue" :options="qrcodeOptions"></qrcode>
                     </div>

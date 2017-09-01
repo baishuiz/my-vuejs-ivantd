@@ -1,6 +1,7 @@
-import "./style/index.less"
-import list from './list.vue'
-import listItem from './list-item.vue'
-list.item = listItem
+import './style/index.less';
+import list from './list';
+import listItem from './list-item';
+
+list.item = listItem;
 
 export default list;

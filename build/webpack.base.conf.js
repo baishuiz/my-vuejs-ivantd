@@ -110,7 +110,7 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-var baseWebpackConfig = {
+module.exports = {
   entry: {
     app: './src/main.js',
     demo: './demo/main.js'
@@ -142,14 +142,7 @@ var baseWebpackConfig = {
         loader: 'eslint-loader',
         enforce: 'pre',
         //include: [resolve('src'), resolve('packages'), resolve('test')],
-        include: [
-          // resolve('src/docs/zh-cn/progress.md'),
-          // resolve('packages/components/progress'),
-          // resolve('src/docs/zh-cn/popover.md'),
-          // resolve('packages/components/popover'),
-          // resolve('packages/components/back-top'),
-          // resolve('packages/components/popconfirm'),
-        ],
+        include:[],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -187,10 +180,7 @@ var baseWebpackConfig = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
+      }
     ]
   }
 }
-
-// baseWebpackConfig.entry = Object.assign(baseWebpackConfig.entry, svgoConfig)
-module.exports = baseWebpackConfig

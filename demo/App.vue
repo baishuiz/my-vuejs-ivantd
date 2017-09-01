@@ -6,6 +6,6 @@
     export default {}
 </script>
 <style lang="less">
-    // @import url('./static/index.less');
-    // @import url('./static/demo.less');
+    @import url('./style/index.less');
+    @import url('./style/demo.less');
 </style>
