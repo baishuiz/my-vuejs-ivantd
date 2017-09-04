@@ -66,12 +66,18 @@ const md = require('markdown-it')('default', {
   render: function (tokens, idx) {
     // var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
     if (tokens[idx].nesting === 1) {
-      // var description = (m && m.length > 1) ? m[1] : '';
-      var summaryContent = tokens[idx + 1].content;
-      var summary = striptags.fetch(summaryContent, 'summary');
-      var summaryHTML = summary ? md.render(summary) : '';
+      // console.log(tokens);
 
+      var tagContent = tokens[idx + 1].content;
+      var iframe = striptags.fetch(tagContent, 'iframe');
+      console.log(iframe)
+      // var iframeHtml = iframe ? md.render(iframe) : '';
+      // console.log(iframeHtml)
+      var summary = striptags.fetch(tagContent, 'summary');
+      var summaryHTML = summary ? md.render(summary) : '';
+      // console.log(summaryHTML+'1');
       var content = tokens[idx + 2].content;
+      // console.log(content)
       var html = convert(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1');
       var script = striptags.fetch(content, 'script');
       var style = striptags.fetch(content, 'style');
@@ -80,11 +86,11 @@ const md = require('markdown-it')('default', {
 
       var jsfiddle = { html: html, script: script, style: style };
       jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
-
-      // opening tag
-      return `<v-code :jsfiddle="${jsfiddle}">
-                  <div class="box-demo-show" slot="component">${html}</div>
-                  <div slot="description">${summaryHTML}</div>
+      // console.log(jsfiddle);
+      // opening tag <div slot="demo">${html}</div>
+      return `<v-code :jsfiddle="${jsfiddle}" iframeUrl="${iframe}">
+                 
+                  <div slot="desc">${summaryHTML}</div>
                   <div class="highlight" slot="code">${codeHtml}</div>
                 `;
 

@@ -55,7 +55,7 @@
                     list: [{
                         name: 'Layout 基础布局',
                         link: {
-                            path: 'flex'
+                            path: 'layout'
                         },
                     },{
                         name: 'WhiteSpace 上下留白',

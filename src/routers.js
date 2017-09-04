@@ -50,5 +50,13 @@ export default [
             path: 'button',
             name: 'button',
             component: resolve => require(['./docs/zh-cn/button.md'], resolve),
+        }, {
+            path: 'layout',
+            name: 'layout',
+            component: resolve => require(['./docs/zh-cn/layout.md'], resolve),
+        }, {
+            path: 'whiteSpace',
+            name: 'whiteSpace',
+            component: resolve => require(['./docs/zh-cn/whiteSpace.md'], resolve),
         }],
     }];
