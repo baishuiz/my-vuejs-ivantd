@@ -15,7 +15,7 @@
                             <div class="doc-simulator__url">http://10.166.3.200:8080/demo.html</div>
                             <div class="doc-simulator__reload"></div>
                         </div>
-                        <iframe src="http://10.166.3.200:8080/demo.html" frameborder="0"></iframe>
+                        <iframe src="http://10.166.3.200:7000/demo.html" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ import qrcode from '../components/qrcode.js';
 export default {
     data() {
         return {
-            qrcodeValue: 'http://10.166.3.200:8080/demo.html',
+            qrcodeValue: 'http://10.166.3.200:7000/demo.html',
             qrcodeOptions: {
                 size: 164
             }
