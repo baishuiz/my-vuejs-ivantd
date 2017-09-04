@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import 'highlight.js/styles/solarized-light.css';
+import 'highlight.js/styles/vs.css';
 import App from './App';
 import routerMap from './routers';
 // import iVantd from '../packages';
@@ -8,10 +8,10 @@ import routerMap from './routers';
 import components from './components';
 // import locale from '../packages/locale/lang/en';
 // import locale from '../packages/locale/lang/zh-CN';
-import iVantd from '../packages';
+// import iVantd from '../packages';
 
 Vue.use(VueRouter);
-Vue.use(iVantd);
+// Vue.use(iVantd);
 Vue.use(components);
 
 window.Vue = Vue;

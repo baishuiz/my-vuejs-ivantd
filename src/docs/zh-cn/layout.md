@@ -7,74 +7,21 @@
 
 <iframe>http://10.166.3.200:8080/demo.html#/flex</iframe>
 <summary>
-#### 代码演示，这是一个布局案例
+#### 基础演示
 >基础演示
 </summary>
 
 ```html
-<v-flex align="middle">
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-</v-flex>
-
-<v-flex align="middle">
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-</v-flex>
-
-<v-flex align="middle">
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-    <v-flex-item>
-        
-    </v-flex-item>
-</v-flex>
-
-<v-flex align="middle" wrap="wrap">
-    
-</v-flex>
-
-<v-flex align="middle" justify="center">
-    
-</v-flex>
-
-<v-flex align="middle" justify="end">
-    
-</v-flex>
-
-<v-flex align="middle" justify="between">
-    
-</v-flex>
-
-<v-flex align="top">
-    
-</v-flex>
-
-<v-flex align="bottom">
-    
-</v-flex>
-
-<v-flex align="baseline">
-    
-</v-flex>
+<template>
+    <v-flex align="middle"></v-flex>
+    <v-flex align="middle" wrap="wrap"></v-flex>
+    <v-flex align="middle" justify="center"></v-flex>
+    <v-flex align="middle" justify="end"></v-flex>
+    <v-flex align="middle" justify="between"></v-flex>
+    <v-flex align="top"></v-flex>
+    <v-flex align="bottom"></v-flex>
+    <v-flex align="baseline"></v-flex>
+</template>
 ```
 :::
 

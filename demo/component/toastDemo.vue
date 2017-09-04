@@ -6,20 +6,20 @@
         <div class="demo-preview-item" id="button-demo-0">
             <div class="demoTitle">基础</div>
             <div class="demoContainer">
-                <v-wing-blank size="sm">
-                    <v-button @click="info">Info</v-button>
+                <v-wing-blank size="lg">
+                    <v-button type='blue'  @click="info">Info</v-button>
                     <v-white-space/>
-                    <v-button @click="icon">Icon</v-button>
+                    <v-button ghost  @click="icon">Icon</v-button>
                     <v-white-space/>
-                    <v-button @click="nomask">Nomask</v-button>
+                    <v-button  @click="nomask">Nomask</v-button>
                     <v-white-space/>
-                    <v-button @click="loading">Loading</v-button>
+                    <v-button ghost  @click="loading">Loading</v-button>
                     <v-white-space/>
-                    <v-button @click="success">Success</v-button>
+                    <v-button ghost  @click="success">Success</v-button>
                     <v-white-space/>
-                    <v-button @click="warning">Warning</v-button>
+                    <v-button type='blue'  @click="warning">Warning</v-button>
                     <v-white-space/>
-                    <v-button @click="error">Error</v-button>
+                    <v-button ghost  @click="error">Error</v-button>
                     <v-white-space/>
 
                 </v-wing-blank>

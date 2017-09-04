@@ -1,11 +1,11 @@
-# WhiteSpace 上下留白
+# WingBlank 两翼留白
 
 >布局控件
 
 ## 代码演示
 ::: demo
 
-<iframe>http://10.166.3.200:8080/demo.html#/whiteSpace</iframe>
+<iframe>http://10.166.3.200:8080/demo.html#/wingBlank</iframe>
 <summary>
 #### 基础演示
 >基础演示
@@ -13,7 +13,7 @@
 
 ```html
 <template>
-    <v-white-space size="xs" />
+    <v-wing-blank size="sm"></v-wing-blank>
 </template>
 ```
 :::
@@ -22,7 +22,7 @@
 
 适用平台：Web
 
-## WhiteSpace
+## WingBlank
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |-------------------------------- |-------- |
-| size | 上下留白的间距 | string | 可选xs,sm,md,lg,xl | md |
+| size | 两翼留白的间距 | string | 可选sm,md,lg | lg |

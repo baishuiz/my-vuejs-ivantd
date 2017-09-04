@@ -58,5 +58,41 @@ export default [
             path: 'whiteSpace',
             name: 'whiteSpace',
             component: resolve => require(['./docs/zh-cn/whiteSpace.md'], resolve),
+        }, {
+            path: 'wingBlank',
+            name: 'wingBlank',
+            component: resolve => require(['./docs/zh-cn/wingBlank.md'], resolve),
+        }, {
+            path: 'badge',
+            name: 'badge',
+            component: resolve => require(['./docs/zh-cn/badge.md'], resolve),
+        }, {
+            path: 'grid',
+            name: 'grid',
+            component: resolve => require(['./docs/zh-cn/grid.md'], resolve),
+        }, {
+            path: 'icon',
+            name: 'icon',
+            component: resolve => require(['./docs/zh-cn/icon.md'], resolve),
+        }, {
+            path: 'list',
+            name: 'list',
+            component: resolve => require(['./docs/zh-cn/list.md'], resolve),
+        }, {
+            path: 'progress',
+            name: 'progress',
+            component: resolve => require(['./docs/zh-cn/progress.md'], resolve),
+        }, {
+            path: 'activityIndicator',
+            name: 'activityIndicator',
+            component: resolve => require(['./docs/zh-cn/activityIndicator.md'], resolve),
+        }, {
+            path: 'toast',
+            name: 'toast',
+            component: resolve => require(['./docs/zh-cn/toast.md'], resolve),
+        }, {
+            path: 'tabbar',
+            name: 'tabbar',
+            component: resolve => require(['./docs/zh-cn/tabbar.md'], resolve),
         }],
     }];
