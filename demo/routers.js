@@ -46,8 +46,4 @@ export default [{
     path: '/badge',
     name: 'badge',
     component: resolve => require(['./component/badgeDemo.vue'], resolve),
-}, {
-    path: '/tabbar',
-    name: 'tabbar',
-    component: resolve => require(['./component/taBbarDemo.vue'], resolve),
 }];
