@@ -1,6 +1,3 @@
-<style>
-.btn{font-size:14px;width:130px;height:45px;line-height:45px;color:#fff;}
-</style>
 # ivantd
 
 >ivantd 是一套基于 vue.js 和 Ant Design Mobile 样式 的移动端 UI 组件库，旨在帮助开发者提升产品体验和开发效率、降低维护成本。
