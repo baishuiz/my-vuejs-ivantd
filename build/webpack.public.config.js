@@ -3,8 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        'ivantd': './packages/index.js',
-       // style: './packages/index.js'
+        'ivantd': './packages/index.js'
     },
     output: {
         path: path.resolve(__dirname, '../public'),
