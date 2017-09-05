@@ -1,33 +1,33 @@
 <template>
   <!-- <div class="box box-demo">
-                                  <slot name="component"></slot>
-                                  <div class="box-demo-description">
-                                    <slot name="description"></slot>
-                                    <span class="btn-toggle" :class="{open: isOpen}" @click="toggle">
-                                      123<i class="anticon anticon-down-circle-o"></i>
-                                    </span>
-                                
-                                  </div>
-                                  <transition name="slide">
-                                    <div class="box-demo-code" >
-                                      <slot name="code"></slot>
-                                    </div>
-                                  </transition>
-                                </div> -->
+                                        <slot name="component"></slot>
+                                        <div class="box-demo-description">
+                                          <slot name="description"></slot>
+                                          <span class="btn-toggle" :class="{open: isOpen}" @click="toggle">
+                                            123<i class="anticon anticon-down-circle-o"></i>
+                                          </span>
+                                      
+                                        </div>
+                                        <transition name="slide">
+                                          <div class="box-demo-code" >
+                                            <slot name="code"></slot>
+                                          </div>
+                                        </transition>
+                                      </div> -->
   <div class="example code-row" style="overflow: hidden;">
     <div class="example-demo code-col code-col-span-12">
       <div class="example-case">
         <!-- <slot name="demo"></slot> -->
         <!-- <iframe :src="iframeUrl" frameborder="0"></iframe> -->
         <div class="phone" ref="phone">
-                    <div class="doc-simulator">
-                        <div class="doc-simulator__nav">
-                            <div class="doc-simulator__url">{{iframeUrl}}</div>
-                            <div class="doc-simulator__reload"></div>
-                        </div>
-                        <iframe :src="iframeUrl" frameborder="0"></iframe>
-                    </div>
-                </div>
+          <div class="doc-simulator">
+            <div class="doc-simulator__nav">
+              <div class="doc-simulator__url">{{dpath}}</div>
+              <div class="doc-simulator__reload"></div>
+            </div>
+            <iframe :src="dpath" frameborder="0"></iframe>
+          </div>
+        </div>
       </div>
     </div>
     <!-- <div class="example-split"></div> -->
@@ -37,24 +37,25 @@
         <span></span>
       </div>
       <!-- <header class="example-header">
-                    <span></span>
-                  </header> -->
+                          <span></span>
+                        </header> -->
       <div :style="style">
         <slot name="code"></slot>
       </div>
       <div class="example-code-more" v-if="showMore" @click="showCode = !showCode">
         显示代码
         <!-- <Icon type="ios-arrow-down" v-show="!showCode"></Icon>
-                        <Icon type="ios-arrow-up" v-show="showCode"></Icon>
-                        <i-button type="text" v-show="hideCode && !showCode">
-                          <template v-if="lang === 'zh-CN'">显示代码</template>
-                          <template v-else>Show Code</template>
-                        </i-button> -->
+                              <Icon type="ios-arrow-up" v-show="showCode"></Icon>
+                              <i-button type="text" v-show="hideCode && !showCode">
+                                <template v-if="lang === 'zh-CN'">显示代码</template>
+                                <template v-else>Show Code</template>
+                              </i-button> -->
       </div>
     </div>
   </div>
 </template>
 <script>
+import { hostName } from '../config/env.js';
 export default {
   name: 'Code',
   props: {
@@ -87,6 +88,13 @@ export default {
     };
   },
   computed: {
+    dpath() {
+      let { iframeUrl } = this;
+      if (hostName) {
+        return hostName + iframeUrl;
+      }
+      return iframeUrl;
+    },
     codeHeight() {
       //  console.log(this.$slots.code[0].children[0])
       let style = {};
@@ -202,11 +210,9 @@ export default {
       border-radius: 6px;
       background: #f2f2f4;
       -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      // right: 20px;
+      box-sizing: border-box; // right: 20px;
       width: 375px;
-      height: 620px;
-      // min-width: 375px;
+      height: 620px; // min-width: 375px;
       // top: -30px;
       -webkit-box-shadow: 0 2px 3px hsla(0, 0%, 4%, .1), 0 0 0 1px hsla(0, 0%, 4%, .1);
       box-shadow: 0 2px 3px hsla(0, 0%, 4%, .1), 0 0 0 1px hsla(0, 0%, 4%, .1);
@@ -226,9 +232,9 @@ export default {
           text-align: center;
           font-weight: 700;
           line-height: 28px;
-          text-overflow:ellipsis;
-          white-space:nowrap;
-          overflow:hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
         }
         .doc-simulator__reload {
           top: 25px;

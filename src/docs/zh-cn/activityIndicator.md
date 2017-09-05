@@ -10,7 +10,7 @@
 ## 代码演示
 ::: demo
 
-<iframe>http://10.166.3.200:8080/demo.html#/activityIndicator</iframe>
+<iframe>/demo.html#/activityIndicator</iframe>
 <summary>
 #### 基础演示
 >基础演示

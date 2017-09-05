@@ -5,7 +5,7 @@
 ## 代码演示
 ::: demo
 
-<iframe>http://10.166.3.200:8080/demo.html#/progress</iframe>
+<iframe>/demo.html#/progress</iframe>
 <summary>
 #### 基础演示
 >基础演示

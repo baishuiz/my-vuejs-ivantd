@@ -10,6 +10,8 @@ import components from './components';
 // import locale from '../packages/locale/lang/zh-CN';
 // import iVantd from '../packages';
 
+import { routerMode } from './config/env';
+
 Vue.use(VueRouter);
 // Vue.use(iVantd);
 Vue.use(components);
@@ -19,8 +21,7 @@ window.Vue = Vue;
 Vue.config.productionTip = false;
 
 window.router = new VueRouter({
-    // mode: 'hash',
-    mode: 'history',
+    mode: routerMode,
     base: __dirname,
     routes: routerMap,
 });
