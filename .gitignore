@@ -2,8 +2,7 @@ node_modules/
 dist/
 npm-debug.log*
 selenium-debug.log
-public/style.js
-public/style.min.js
+public/
 test/unit/coverage
 test/e2e/reports
 .history

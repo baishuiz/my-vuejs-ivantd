@@ -71,7 +71,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       chunks: [
         'manifest', 'vendor', 'demo'
       ],
-      filename: config.build.index,
+      filename: path.resolve(__dirname, '../dist/demo.html'),
       template: 'demo.html',
       inject: true,
       minify: {
