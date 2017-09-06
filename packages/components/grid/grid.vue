@@ -5,7 +5,7 @@
                 <div :class="prefixCls+'-item-content'">
                     <div :class="prefixCls+'-item-inner-content column-num-'+columnNum">
                         <img :class="prefixCls+'-icon'" :src="j1.icon" v-if="j1.icon">
-                        <v-icon :className="prefixCls+'-icon'" :name="j1.svg" size="lg" v-if="j1.svg"/>
+                        <v-icon :className="prefixCls+'-icon'" :type="j1.svg" size="lg" v-if="j1.svg"/>
                         <div :class="prefixCls+'-text'" v-text="j1.text"></div>
                     </div>
                 </div>

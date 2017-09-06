@@ -16,7 +16,7 @@
                             <div class="am-demo-category-name" v-text="i1.name"></div>
                             <div class="am-demo-category-arrow">
                                 <span>
-                                    <v-icon name="down" />
+                                    <v-icon type="down" />
                                 </span>
                             </div>
                         </div>

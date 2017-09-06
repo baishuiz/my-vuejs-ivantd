@@ -34,7 +34,7 @@
                      <div slot="header">Basic</div>
                      <v-list-item align="middle" arrow="horizontal">
                         <div slot="thumb" >
-                            <v-icon name="loading"></v-icon>
+                            <v-icon type="loading"></v-icon>
                         </div>
                         <div>这能干啥呀</div>
                         <div slot="extra">这又是干啥的</div>

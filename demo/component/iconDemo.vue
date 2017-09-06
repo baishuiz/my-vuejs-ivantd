@@ -7,6 +7,9 @@
             <div class="demoTitle">基础</div>
             <div class="demoContainer">
                 <v-grid :data="data" :columnNum="3"/>
+                <!-- <v-wing-blank size="lg">
+                    <v-icon type="search"/>
+                </v-wing-blank> -->
             </div>
         </div>
     </div>

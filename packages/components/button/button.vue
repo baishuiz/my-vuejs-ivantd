@@ -1,7 +1,7 @@
 <template>
     <a role="button" :class="[btnClassObj]" :disabled="disabled" @click="handleClick($event)" @touchstart="handleTouch" @touchend="handleTouch">
-        <v-icon v-if="loading" name='loading' />
-        <v-icon v-if="icon" :name='icon' />
+        <v-icon v-if="loading" type='loading' />
+        <v-icon v-if="icon" :type='icon' />
         <span v-if="$slots && $slots.default">
                 <slot></slot>
             </span>

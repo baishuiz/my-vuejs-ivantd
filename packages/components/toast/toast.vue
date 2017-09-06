@@ -3,7 +3,7 @@
         <div :class="wrapClass">
             <div v-if="icon" :class="prefixCls+'-notice-content'">
                 <div :class="prefixCls+'-text '+prefixCls+'-text-icon'">
-                    <v-icon :name="icon" size="lg" />
+                    <v-icon :type="icon" size="lg" />
                     <div :class="prefixCls+'-text-info'" v-if="content" v-html="content"></div>
                 </div>
             </div>

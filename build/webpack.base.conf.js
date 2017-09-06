@@ -148,7 +148,7 @@ module.exports = {
         loader: 'eslint-loader',
         enforce: 'pre',
         //include: [resolve('src'), resolve('packages'), resolve('test')],
-        include:[],
+        include: [],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -164,7 +164,7 @@ module.exports = {
         include: [resolve('src'), resolve('packages'), resolve('demo')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
@@ -186,7 +186,15 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /\.(svg)$/i,
+        loader: 'svg-sprite-loader',
+        include: [
+          resolve('packages/icon/style/assets').replace(/warn\.js$/, ''), // 1. 属于 antd-mobile 内置 svg 文件
+          // path.resolve(__dirname, 'src/my-project-svg-foler'),  // 2. 自己私人的 svg 存放目录
+        ],  // 把 svgDirs 路径下的所有 svg 文件交给 svg-sprite-loader 插件处理
+      },
     ]
   }
 }
