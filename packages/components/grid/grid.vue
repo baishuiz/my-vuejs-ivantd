@@ -5,7 +5,7 @@
                 <div :class="prefixCls+'-item-content'">
                     <div :class="prefixCls+'-item-inner-content column-num-'+columnNum">
                         <img :class="prefixCls+'-icon'" :src="j1.icon" v-if="j1.icon">
-                        <v-icon :className="prefixCls+'-icon'" :type="j1.svg" size="lg" v-if="j1.svg" />
+                        <Icon :className="prefixCls+'-icon'" :type="j1.svg" size="lg" v-if="j1.svg" />
                         <div :class="prefixCls+'-text'" v-text="j1.text"></div>
                     </div>
                 </div>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import Icon from '../icon';
 import { Flex, FlexItem } from '../flex';
 export default {
     name: 'Grid',
@@ -47,6 +48,7 @@ export default {
         className: String
     },
     comments: {
+        Icon,
         Flex,
         FlexItem
     },
