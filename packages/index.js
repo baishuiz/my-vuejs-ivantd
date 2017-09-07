@@ -4,13 +4,13 @@ import config from './utils/config';
 
 import button from './components/button';
 import icon from './components/icon';
-import flex from './components/flex';
+import { flex, flexItem } from './components/flex';
 import whiteSpace from './components/white-space';
 import wingBlank from './components/wing-blank';
 
 import grid from './components/grid';
 
-import list from './components/list';
+import { list, listItem } from './components/list';
 import progress from './components/progress';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
@@ -23,12 +23,12 @@ const components = {
     button,
     icon,
     flex,
-    flexItem: flex.item,
+    flexItem,
     whiteSpace,
     wingBlank,
     grid,
     list,
-    listItem: list.item,
+    listItem,
     progress,
     toast,
     activityIndicator,

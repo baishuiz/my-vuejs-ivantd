@@ -1,19 +1,23 @@
 <template>
     <a role="button" :class="[btnClassObj]" :disabled="disabled" @click="handleClick($event)" @touchstart="handleTouch" @touchend="handleTouch">
-        <v-icon v-if="loading" type='loading' />
-        <v-icon v-if="icon" :type='icon' />
+        <Icon v-if="loading" type='loading' />
+        <Icon v-if="icon" :type='icon' />
         <span v-if="$slots && $slots.default">
                 <slot></slot>
             </span>
     </a>
 </template>
 <script lang="babel">
+    import Icon from '../icon';
     export default {
         name: 'Button',
         data: () => ({
             prefixCls: 'am-button',
             clicked: false
         }),
+        components:{
+            Icon
+        },
         props: {
             type: {
                 type: String,
