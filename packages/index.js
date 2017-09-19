@@ -1,5 +1,5 @@
 import 'normalize.css/normalize.css';
-// import './style/index.less';
+
 import config from './utils/config';
 
 import button from './components/button';
@@ -11,10 +11,12 @@ import wingBlank from './components/wing-blank';
 import grid from './components/grid';
 
 import { list, listItem } from './components/list';
+import { card, cardHeader, cardBody, cardFooter } from './components/card';
 import progress from './components/progress';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
+import modal from './components/modal';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -33,16 +35,11 @@ const components = {
     toast,
     activityIndicator,
     badge,
-};
-
-
-// 注册全局
-progress.install = function (Vue) {
-    Vue.$progress = Vue.prototype.$progress = progress;
-};
-
-toast.install = function (Vue) {
-    Vue.$toast = Vue.prototype.$toast = toast;
+    card,
+    cardHeader,
+    cardBody,
+    cardFooter,
+    modal,
 };
 
 for (const item of Object.values(components)) {
@@ -63,12 +60,40 @@ const install = function (Vue, opts = {}) {
             Vue.use(item, opts.prefix);
         }
     }
+    
+    // 注册全局
+    Vue.$progress = Vue.prototype.$progress = progress;
+    Vue.$toast = Vue.prototype.$toast = toast;
+    Vue.$modal = Vue.prototype.$modal = modal;
 };
-
 
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-export default { install, version, ...components }
+export {
+    button,
+    icon,
+    flex,
+    flexItem,
+    whiteSpace,
+    wingBlank,
+    grid,
+    list,
+    listItem,
+    progress,
+    toast,
+    activityIndicator,
+    badge,
+    card,
+    cardHeader,
+    cardBody,
+    cardFooter,
+    modal,
+};
+
+export default {
+    version,
+    install,
+};

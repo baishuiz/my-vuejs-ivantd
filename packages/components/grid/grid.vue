@@ -1,7 +1,7 @@
 <template>
     <div :class="gridClassName">
-        <Flex justify="center" align="stretch" v-for="(i1,i) in gridData" :key="i">
-            <FlexItem :className="prefixCls+'-item'" v-for="(j1,j) in i1" :key="j">
+        <v-flex justify="center" align="stretch" v-for="(i1,i) in gridData" :key="i">
+            <v-flex-item :className="prefixCls+'-item'" v-for="(j1,j) in i1" :key="j">
                 <div :class="prefixCls+'-item-content'">
                     <div :class="prefixCls+'-item-inner-content column-num-'+columnNum">
                         <img :class="prefixCls+'-icon'" :src="j1.icon" v-if="j1.icon">
@@ -9,21 +9,21 @@
                         <div :class="prefixCls+'-text'" v-text="j1.text"></div>
                     </div>
                 </div>
-            </FlexItem>
+            </v-flex-item>
             <template v-if="i1.length!=columnNum">
-                <FlexItem :className="prefixCls+'-item '+prefixCls+'-null-item'" v-for="f in (columnNum-i1.length)" :key="f">
+                <v-flex-item :className="prefixCls+'-item '+prefixCls+'-null-item'" v-for="f in (columnNum-i1.length)" :key="f">
                     <div :class="prefixCls+'-item-content'">
                         <div :class="prefixCls+'-item-inner-content'"></div>
                     </div>
-                </FlexItem>
+                </v-flex-item>
             </template>
-        </Flex>
+        </v-flex>
     </div>
 </template>
 
 <script>
 import Icon from '../icon';
-import { Flex, FlexItem } from '../flex';
+import { flex as vFlex, flexItem as vFlexItem } from '../flex';
 export default {
     name: 'Grid',
     data: function() {
@@ -49,8 +49,8 @@ export default {
     },
     comments: {
         Icon,
-        Flex,
-        FlexItem
+        vFlex,
+        vFlexItem
     },
     computed: {
         gridClassName() {
