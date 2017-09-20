@@ -54,12 +54,18 @@ const dataList = [{
     children: [{
         name: 'TabBar 标签栏',
         path: 'tabbar',
+    },{
+        name: 'Checkbox 复选框',
+        path: 'checkbox',
     }]
 }, {
     name: '数据录入 Data Entry',
     children: [{
         name: 'Button 按钮',
         path: 'button',
+    },{
+        name: 'Checkbox 复选框',
+        path: 'checkbox',
     }]
 }, {
     name: '数据展示 Data Display',

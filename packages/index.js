@@ -17,6 +17,7 @@ import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
 import modal from './components/modal';
+import { checkbox, checkboxItem } from './components/checkbox';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -40,6 +41,8 @@ const components = {
     cardBody,
     cardFooter,
     modal,
+    checkbox,
+    checkboxItem,
 };
 
 for (const item of Object.values(components)) {
@@ -60,7 +63,7 @@ const install = function (Vue, opts = {}) {
             Vue.use(item, opts.prefix);
         }
     }
-    
+
     // 注册全局
     Vue.$progress = Vue.prototype.$progress = progress;
     Vue.$toast = Vue.prototype.$toast = toast;
@@ -91,6 +94,8 @@ export {
     cardBody,
     cardFooter,
     modal,
+    checkbox,
+    checkboxItem,
 };
 
 export default {

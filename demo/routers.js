@@ -54,4 +54,8 @@ export default [{
     path: '/modal',
     name: 'modal',
     component: resolve => require(['./component/modalDemo.vue'], resolve),
+}, {
+    path: '/checkbox',
+    name: 'checkbox',
+    component: resolve => require(['./component/checkboxDemo.vue'], resolve),
 }];
