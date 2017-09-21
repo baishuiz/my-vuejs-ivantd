@@ -15,6 +15,7 @@ import progress from './components/progress';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
+import radio from './components/radio';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -33,6 +34,7 @@ const components = {
     toast,
     activityIndicator,
     badge,
+    radio
 };
 
 

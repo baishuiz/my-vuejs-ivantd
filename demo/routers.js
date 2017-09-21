@@ -46,4 +46,8 @@ export default [{
     path: '/badge',
     name: 'badge',
     component: resolve => require(['./component/badgeDemo.vue'], resolve),
+}, {
+    path: '/radio',
+    name: 'radio',
+    component: resolve => require(['./component/radioDemo.vue'], resolve),
 }];
