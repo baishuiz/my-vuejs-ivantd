@@ -94,5 +94,9 @@ export default [
             path: 'tabbar',
             name: 'tabbar',
             component: resolve => require(['./docs/zh-cn/tabbar.md'], resolve),
+        }, {
+            path: 'card',
+            name: 'card',
+            component: resolve => require(['./docs/zh-cn/card.md'], resolve),
         }],
     }];

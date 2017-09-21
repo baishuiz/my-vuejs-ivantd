@@ -47,7 +47,15 @@ export default [{
     name: 'badge',
     component: resolve => require(['./component/badgeDemo.vue'], resolve),
 }, {
-    path: '/radio',
-    name: 'radio',
-    component: resolve => require(['./component/radioDemo.vue'], resolve),
+    path: '/card',
+    name: 'card',
+    component: resolve => require(['./component/cardDemo.vue'], resolve),
+}, {
+    path: '/modal',
+    name: 'modal',
+    component: resolve => require(['./component/modalDemo.vue'], resolve),
+}, {
+    path: '/checkbox',
+    name: 'checkbox',
+    component: resolve => require(['./component/checkboxDemo.vue'], resolve),
 }];

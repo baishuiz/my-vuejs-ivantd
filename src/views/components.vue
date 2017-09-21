@@ -106,6 +106,11 @@
                         link: {
                             path: 'list'
                         },
+                    },{
+                        name: 'Card 卡片',
+                        link: {
+                            path: 'card'
+                        },
                     }],
                 }, {
                     groupName: '操作反馈 Feedback',

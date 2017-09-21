@@ -70,7 +70,7 @@ const md = require('markdown-it')('default', {
 
       var tagContent = tokens[idx + 1].content;
       var iframe = striptags.fetch(tagContent, 'iframe');
-      console.log(iframe)
+      // console.log(iframe)
       // var iframeHtml = iframe ? md.render(iframe) : '';
       // console.log(iframeHtml)
       var summary = striptags.fetch(tagContent, 'summary');

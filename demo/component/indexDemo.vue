@@ -54,12 +54,18 @@ const dataList = [{
     children: [{
         name: 'TabBar 标签栏',
         path: 'tabbar',
+    },{
+        name: 'Checkbox 复选框',
+        path: 'checkbox',
     }]
 }, {
     name: '数据录入 Data Entry',
     children: [{
         name: 'Button 按钮',
         path: 'button',
+    },{
+        name: 'Checkbox 复选框',
+        path: 'checkbox',
     }]
 }, {
     name: '数据展示 Data Display',
@@ -75,6 +81,9 @@ const dataList = [{
     }, {
         name: 'List 列表',
         path: 'list',
+    }, {
+        name: 'Card 卡片',
+        path: 'card',
     }]
 }, {
     name: '操作反馈 Feedback',
@@ -87,6 +96,9 @@ const dataList = [{
     }, {
         name: 'Toast 轻提示',
         path: 'toast',
+    }, {
+        name: 'Modal 对话框',
+        path: 'modal',
     }]
 }]
 export default {
