@@ -22,13 +22,14 @@ window.router = new VueRouter({
 
 window.router.beforeEach((to, from, next) => {
     // console.log(from);
-    Vue.$progress.start();
+    // Vue.$loadingBar.start();
     next();
 });
 
 window.router.afterEach(() => {
     // console.log(to);
-    Vue.$progress.finish();
+    // Vue.$loadingBar.finish();
+    // Vue.$loadingBar.destroy();
 });
 
 new Vue({

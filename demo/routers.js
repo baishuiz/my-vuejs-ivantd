@@ -58,4 +58,8 @@ export default [{
     path: '/checkbox',
     name: 'checkbox',
     component: resolve => require(['./component/checkboxDemo.vue'], resolve),
+}, {
+    path: '/loadingBar',
+    name: 'loadingBar',
+    component: resolve => require(['./component/loadingBarDemo.vue'], resolve),
 }];

@@ -1,6 +1,6 @@
 <template>
     <div @change="$emit('change', currentValue)">
-        <v-list-item v-for="(option,index) in options" align="middle" :class="[`${prefixCls}-item`,{[`${prefixCls}-item-disabled`]: option.disabled||max <= currentValue.length}]" :key="index">
+        <v-list-item :active="true" v-for="(option,index) in options" align="middle" :class="[`${prefixCls}-item`,{[`${prefixCls}-item-disabled`]: option.disabled||max <= currentValue.length}]" :key="index">
             <div v-text="option.label || option"></div>
             <div slot="extra">
                 <label :class="`${prefixCls}-wrapper`" slot="title">

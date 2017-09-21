@@ -13,6 +13,7 @@ import grid from './components/grid';
 import { list, listItem } from './components/list';
 import { card, cardHeader, cardBody, cardFooter } from './components/card';
 import progress from './components/progress';
+import loadingBar from './components/loading-bar';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
@@ -43,6 +44,7 @@ const components = {
     modal,
     checkbox,
     checkboxItem,
+    loadingBar,
 };
 
 for (const item of Object.values(components)) {
@@ -65,7 +67,7 @@ const install = function (Vue, opts = {}) {
     }
 
     // 注册全局
-    Vue.$progress = Vue.prototype.$progress = progress;
+    Vue.$loadingBar = Vue.prototype.$loadingBar = loadingBar;
     Vue.$toast = Vue.prototype.$toast = toast;
     Vue.$modal = Vue.prototype.$modal = modal;
 };
@@ -96,6 +98,7 @@ export {
     modal,
     checkbox,
     checkboxItem,
+    loadingBar,
 };
 
 export default {

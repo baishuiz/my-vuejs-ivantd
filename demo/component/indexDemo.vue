@@ -54,9 +54,6 @@ const dataList = [{
     children: [{
         name: 'TabBar 标签栏',
         path: 'tabbar',
-    },{
-        name: 'Checkbox 复选框',
-        path: 'checkbox',
     }]
 }, {
     name: '数据录入 Data Entry',
@@ -90,6 +87,9 @@ const dataList = [{
     children: [{
         name: 'Progress 进度条',
         path: 'progress',
+    },{
+        name: 'LoadingBar 加载进度条',
+        path: 'loadingBar',
     }, {
         name: 'ActivityIndicator 活动指示器',
         path: 'activityIndicator',
