@@ -1,33 +1,45 @@
 <template>
-  <label :class="wrapCls">
-    <span :class="prefixCls">
-      <input :class="[prefixCls + '-input']" type="radio" value="on">
-      <span :class="[prefixCls + 'inner']"></span>
-    </span>
-  </label>
+    <div :class="`${prefixCls}-agree`" @change="$emit('change', currentValue)">
+        <label :class="`${prefixCls}-wrapper ${prefixCls}-agree-label` ">
+            <span :class="[`${prefixCls}`,{[`${prefixCls}-disabled`]:disabled,[`${prefixCls}-checked`]: currentValue}]">
+                <span :class="`${prefixCls}-inner`"></span>
+                <input type="radio" :class="`${prefixCls}-input`" :disabled="disabled" :value="value" v-model="currentValue">
+            </span>
+            <slot></slot>
+        </label>
+    </div>
 </template>
 
 <script>
-import classNames from 'classnames';
 export default {
-  name: 'Radio',
-  data: function() {
-    return {
-      prefixCls: 'am-radio',
-    }
-  },
-  props: {
-    name: String,
-  },
-  computed: {
-    wrapCls() {
-      let {
-        prefixCls,
-      } = this;
-      let classObj = {};
-      classObj[prefixCls + '-wrapper'] = true;
-      return classObj;
-    }
-  }
+    name: 'Radio',
+    data: function() {
+        return {
+            prefixCls: 'am-radio',
+            currentValue: this.value,
+        }
+    },
+    props: {
+        disabled: {
+            type: Boolean,
+            default: false
+        },
+        value: {
+            type: [String, Number, Boolean],
+            default: false
+        },
+        label: {
+            type: [String, Number, Boolean]
+        },
+    },
+    watch: {
+        value(val) {
+            this.currentValue = val;
+        },
+        currentValue(val) {
+            this.$emit('input', val);
+        }
+    },
+
 }
 </script>

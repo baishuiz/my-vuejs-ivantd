@@ -1,4 +1,5 @@
 import './style/index.less';
-import radio from './radio.vue';
+import radio from './radio';
+import radioItem from './radio-item';
 
-export default radio;
+export { radio,radioItem };
