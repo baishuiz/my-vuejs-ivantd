@@ -58,4 +58,13 @@ export default [{
     path: '/checkbox',
     name: 'checkbox',
     component: resolve => require(['./component/checkboxDemo.vue'], resolve),
-}];
+}, {
+    path: '/radio',
+    name: 'radio',
+    component: resolve => require(['./component/radioDemo.vue'], resolve),
+}, {
+    path: '/switch',
+    name: 'switch',
+    component: resolve => require(['./component/switchDemo.vue'], resolve),
+}
+];
