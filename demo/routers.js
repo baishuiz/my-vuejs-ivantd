@@ -62,4 +62,24 @@ export default [{
     path: '/loadingBar',
     name: 'loadingBar',
     component: resolve => require(['./component/loadingBarDemo.vue'], resolve),
+}, {
+    path: '/tabs',
+    name: 'tabs',
+    component: resolve => require(['./component/tabsDemo.vue'], resolve),
+}, {
+    path: '/tabbar',
+    name: 'tabbar',
+    component: resolve => require(['./component/tabBarDemo.vue'], resolve),
+}, {
+    path: '/imagePicker',
+    name: 'imagePicker',
+    component: resolve => require(['./component/imagePickerDemo.vue'], resolve),
+}, {
+    path: '/pickerView',
+    name: 'pickerView',
+    component: resolve => require(['./component/pickerViewDemo.vue'], resolve),
+}, {
+    path: '/popup',
+    name: 'popup',
+    component: resolve => require(['./component/popupDemo.vue'], resolve),
 }];

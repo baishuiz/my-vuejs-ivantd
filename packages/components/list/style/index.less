@@ -1,7 +1,9 @@
 @import '../../style/mixins';
 @import '../../style/themes/default';
 
-.am-list {
+@listPrefixCls: am-list;
+
+.@{listPrefixCls} {
   &-header {
     padding: @v-spacing-lg @h-spacing-lg @v-spacing-md @h-spacing-lg;
     font-size: @font-size-base;
@@ -20,25 +22,18 @@
   &-body {
     position: relative;
     background-color: @fill-base;
-    .hairline-top(@border-color-base);
-    // 注意：如果元素的 overflow 有 scroll 出现，其伪元素 绝对定位 显示将出错，例如 bottom: 0
-    &:after {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 100%;
-      border-bottom: @border-width-sm solid @border-color-base;
-    }
+    .hairline('top');
+    .hairline('bottom');
 
     div:not(:last-child) {
-      .am-list-line {
-        .hairline-bottom(@border-color-base);
+      .@{listPrefixCls}-line {
+        .hairline('bottom');
       }
     }
   }
 }
 
-.am-list-item {
+.@{listPrefixCls}-item {
   position: relative;
   display: flex;
   padding-left: @h-spacing-lg;
@@ -49,7 +44,7 @@
   transition: background-color 200ms;
   align-items: center;
 
-  .am-list-ripple {
+  .@{listPrefixCls}-ripple {
     position: absolute;
     background: transparent;
     display: inline-block;
@@ -61,54 +56,54 @@
     border-radius: 100%;
     transform: scale(0);
 
-    &.am-list-ripple-animate {
+    &.@{listPrefixCls}-ripple-animate {
       background-color: hsla(0, 0%, 62%, .2);
       animation: ripple 1s linear;
     }
   }
 
-  &.am-list-item-top {
-    .am-list-line {
+  &.@{listPrefixCls}-item-top {
+    .@{listPrefixCls}-line {
       align-items: flex-start;
 
-      .am-list-arrow {
-        margin-top: 0.04rem;
+      .@{listPrefixCls}-arrow {
+        margin-top: 2 * @hd;
       }
     }
   }
 
-  &.am-list-item-middle {
-    .am-list-line {
+  &.@{listPrefixCls}-item-middle {
+    .@{listPrefixCls}-line {
       align-items: center;
     }
   }
 
-  &.am-list-item-bottom {
-    .am-list-line {
+  &.@{listPrefixCls}-item-bottom {
+    .@{listPrefixCls}-line {
       align-items: flex-end;
     }
   }
 
-  &.am-list-item-error {
-    .am-list-line {
-      .am-list-extra {
+  &.@{listPrefixCls}-item-error {
+    .@{listPrefixCls}-line {
+      .@{listPrefixCls}-extra {
         color: #f50;
 
-        .am-list-brief {
+        .@{listPrefixCls}-brief {
           color: #f50;
         }
       }
     }
   }
 
-  &.am-list-item-active {
+  &.@{listPrefixCls}-item-active {
     background-color: @fill-tap;
   }
 
   &&-disabled {
-    .am-list-line {
-      .am-list-content,
-      .am-list-extra {
+    .@{listPrefixCls}-line {
+      .@{listPrefixCls}-content,
+      .@{listPrefixCls}-extra {
         color: @color-text-disabled;
       }
     }
@@ -121,7 +116,7 @@
   }
 
   /* list左图片显示*/
-  .am-list-thumb {
+  .@{listPrefixCls}-thumb {
     &:first-child {
       margin-right: @h-spacing-lg;
     }
@@ -131,7 +126,7 @@
     }
   }
 
-  .am-list-line {
+  .@{listPrefixCls}-line {
     position: relative;
     display: flex;
     flex: 1;
@@ -140,49 +135,47 @@
     min-height: @list-item-height;
     overflow: hidden;
 
-    // .hairline-bottom(@border-color-base);
-
     /* list左侧主内容*/
-    .am-list-content {
+    .@{listPrefixCls}-content {
       flex: 1;
       color: @color-text-base;
-      font-size: @font-size-xxl;
+      font-size: @font-size-heading;
       line-height: @line-height-paragraph;
       text-align: left;
       .ellipsis();
 
-      padding-top: .14rem;
-      padding-bottom: .14rem;
+      padding-top: 7 * @hd;
+      padding-bottom: 7 * @hd;
     }
 
     /* list右补充内容*/
-    .am-list-extra {
+    .@{listPrefixCls}-extra {
       flex-basis: 36%;
       color: @color-text-caption;
-      font-size: @font-size-xl;
+      font-size: @font-size-caption;
       line-height: @line-height-paragraph;
       text-align: right;
       .ellipsis();
 
-      padding-top: .14rem;
-      padding-bottom: .14rem;
+      padding-top: 7 * @hd;
+      padding-bottom: 7 * @hd;
     }
 
-    .am-list-title {
+    .@{listPrefixCls}-title {
       .ellipsis();
     }
 
     /* 辅助性文字*/
-    .am-list-brief {
+    .@{listPrefixCls}-brief {
       color: @color-text-caption;
-      font-size: @font-size-lg;
+      font-size: @font-size-subhead;
       line-height: @line-height-paragraph;
       margin-top: @v-spacing-sm;
       .ellipsis();
     }
 
     /* list右侧箭头*/
-    .am-list-arrow {
+    .@{listPrefixCls}-arrow {
       display: block;
       width: @icon-size-xxs;
       height: @icon-size-xxs;
@@ -210,25 +203,25 @@
     }
 
     &-multiple {
-      padding: .25rem @h-spacing-lg .25rem 0;
+      padding: 12.5 * @hd @h-spacing-lg 12.5 * @hd 0;
 
-      .am-list-content {
+      .@{listPrefixCls}-content {
         padding-top: 0;
         padding-bottom: 0;
       }
 
-      .am-list-extra {
+      .@{listPrefixCls}-extra {
         padding-top: 0;
         padding-bottom: 0;
       }
     }
 
     &-wrap {
-      .am-list-content {
+      .@{listPrefixCls}-content {
         white-space: normal;
       }
 
-      .am-list-extra {
+      .@{listPrefixCls}-extra {
         white-space: normal;
       }
     }
@@ -241,7 +234,7 @@
     height: 100%;
     padding: 0;
     border: 0;
-    font-size: @font-size-xxl;
+    font-size: @font-size-heading;
     appearance: none;
     background-color: transparent;
   }

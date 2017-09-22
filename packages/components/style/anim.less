@@ -7,7 +7,7 @@
   }
 
   &-fade-enter,
-  &-fade-appear {
+  &-fade-leave {
     opacity: 0;
     .effect();
 
@@ -21,7 +21,7 @@
   }
 
   &-fade-enter&-fade-enter-active,
-  &-fade-appear&-fade-appear-active {
+  &-fade-leave&-fade-leave-active {
     animation-name: amFadeIn;
     animation-play-state: running;
   }
@@ -52,12 +52,12 @@
   }
 
   &-slide-up-enter,
-  &-slide-up-appear {
+  &-slide-up-leave {
     transform: translate(0, 100%);
   }
 
   &-slide-up-enter,
-  &-slide-up-appear,
+  &-slide-up-leave,
   &-slide-up-leave {
     .effect();
 
@@ -65,7 +65,7 @@
   }
 
   &-slide-up-enter&-slide-up-enter-active,
-  &-slide-up-appear&-slide-up-appear-active {
+  &-slide-up-leave&-slide-up-leave-active {
     animation-name: amSlideUpIn;
     animation-play-state: running;
   }
@@ -101,7 +101,7 @@
   }
 
   &-zoom-enter,
-  &-zoom-appear {
+  &-zoom-leave {
     opacity: 0;
     .effect();
 
@@ -117,7 +117,7 @@
   }
 
   &-zoom-enter&-zoom-enter-active,
-  &-zoom-appear&-zoom-appear-active {
+  &-zoom-leave&-zoom-leave-active {
     animation-name: amZoomIn;
     animation-play-state: running;
   }
@@ -156,12 +156,12 @@
   }
 
   &-slide-down-enter,
-  &-slide-down-appear {
+  &-slide-down-leave {
     transform: translate(0, -100%);
   }
 
   &-slide-down-enter,
-  &-slide-down-appear,
+  &-slide-down-leave,
   &-slide-down-leave {
     .effect();
 
@@ -169,7 +169,7 @@
   }
 
   &-slide-down-enter&-slide-down-enter-active,
-  &-slide-down-appear&-slide-down-appear-active {
+  &-slide-down-leave&-slide-down-leave-active {
     animation-name: amSlideDownIn;
     animation-play-state: running;
   }

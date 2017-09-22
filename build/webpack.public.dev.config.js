@@ -11,7 +11,7 @@ module.exports = merge(baseWebpackConfig, {
     module: {
         loaders: [{
             test: /\.less$/i, 
-            loader: extractLESS.extract(['css-loader','less-loader'])
+            loader: extractLESS.extract(['css-loader','postcss-loader','less-loader'])
         }]
     },
     plugins: [

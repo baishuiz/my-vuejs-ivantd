@@ -19,6 +19,10 @@ import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
 import modal from './components/modal';
 import { checkbox, checkboxItem } from './components/checkbox';
+import { tabs, tabItem, tabPane, tabPaneItem } from './components/tabs';
+import imagePicker from './components/image-picker';
+import pickerView from './components/picker-view';
+import popup from './components/popup';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -45,6 +49,13 @@ const components = {
     checkbox,
     checkboxItem,
     loadingBar,
+    tabs,
+    tabItem,
+    tabPane,
+    tabPaneItem,
+    imagePicker,
+    pickerView,
+    popup,
 };
 
 for (const item of Object.values(components)) {
@@ -99,6 +110,13 @@ export {
     checkbox,
     checkboxItem,
     loadingBar,
+    tabs,
+    tabItem,
+    tabPane,
+    tabPaneItem,
+    imagePicker,
+    pickerView,
+    popup,
 };
 
 export default {

@@ -54,6 +54,12 @@ const dataList = [{
     children: [{
         name: 'TabBar 标签栏',
         path: 'tabbar',
+    },{
+        name: 'Tabs 标签',
+        path: 'tabs',
+    }, {
+        name: 'Popup',
+        path: 'popup',
     }]
 }, {
     name: '数据录入 Data Entry',
@@ -63,6 +69,12 @@ const dataList = [{
     },{
         name: 'Checkbox 复选框',
         path: 'checkbox',
+    },{
+        name: 'ImagePicker 图片选择上传',
+        path: 'imagePicker',
+    },{
+        name: 'PickerView',
+        path: 'pickerView',
     }]
 }, {
     name: '数据展示 Data Display',

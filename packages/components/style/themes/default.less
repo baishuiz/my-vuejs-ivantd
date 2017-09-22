@@ -1,3 +1,4 @@
+@hd:1px;
 //引用
 @import url('./color.less');
 
@@ -14,7 +15,6 @@
 @font-size-xxl:.34rem;
 @font-size-xxxl:.36rem;
 @font-size-max:1rem;
-
 
 
 // 圆角
@@ -102,6 +102,10 @@
 @list-item-height-sm: .70rem;
 @list-item-height: .88rem;
 
+//grid
+@font-size-caption-sm:@font-size-xs;
+@font-size-caption:@font-size-xl;
+
 // progress
 @progress-full-color:@color-base;
 
@@ -124,6 +128,14 @@
 
 //checkbox
 
+//picker
+@option-height: 42 * @hd;           // picker 标题的高度
+
+//tabs
+@tabs-color: @brand-primary;
+@tabs-height: 87px;
+@tabs-font-size-heading: 30px;
+@tabs-ink-bar-height: @border-width-lg;
 
 // z-index
 @progress-zindex: 2000;

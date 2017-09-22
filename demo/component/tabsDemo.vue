@@ -1,7 +1,7 @@
 <template>
     <div class="demo">
         <div class="demoName">
-            <a class="icon" @click="$router.push({path:'/'})"></a>TabBar
+            <a class="icon" @click="$router.push({path:'/'})"></a>Tabs
         </div>
         <div class="demo-preview-item" id="button-demo-0">
             <div class="demoTitle">基础</div>
