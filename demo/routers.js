@@ -59,6 +59,14 @@ export default [{
     name: 'checkbox',
     component: resolve => require(['./component/checkboxDemo.vue'], resolve),
 }, {
+    path: '/radio',
+    name: 'radio',
+    component: resolve => require(['./component/radioDemo.vue'], resolve),
+}, {
+    path: '/switch',
+    name: 'switch',
+    component: resolve => require(['./component/switchDemo.vue'], resolve),
+},{
     path: '/loadingBar',
     name: 'loadingBar',
     component: resolve => require(['./component/loadingBarDemo.vue'], resolve),
@@ -83,3 +91,4 @@ export default [{
     name: 'popup',
     component: resolve => require(['./component/popupDemo.vue'], resolve),
 }];
+

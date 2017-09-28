@@ -19,6 +19,9 @@ import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
 import modal from './components/modal';
 import { checkbox, checkboxItem } from './components/checkbox';
+
+import { radioItem } from './components/radio';
+import vSwitch from './components/switch';
 import { tabs, tabItem, tabPane, tabPaneItem } from './components/tabs';
 import imagePicker from './components/image-picker';
 import pickerView from './components/picker-view';
@@ -48,6 +51,8 @@ const components = {
     modal,
     checkbox,
     checkboxItem,
+    radioItem,
+    vSwitch,
     loadingBar,
     tabs,
     tabItem,
@@ -109,6 +114,8 @@ export {
     modal,
     checkbox,
     checkboxItem,
+    radioItem,
+    vSwitch,
     loadingBar,
     tabs,
     tabItem,

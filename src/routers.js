@@ -98,5 +98,13 @@ export default [
             path: 'card',
             name: 'card',
             component: resolve => require(['./docs/zh-cn/card.md'], resolve),
+        }, {
+            path: 'switch',
+            name: 'switch',
+            component: resolve => require(['./docs/zh-cn/switch.md'], resolve),
+        }, {
+            path: 'radio',
+            name: 'radio',
+            component: resolve => require(['./docs/zh-cn/radio.md'], resolve),
         }],
     }];
