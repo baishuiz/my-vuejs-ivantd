@@ -11,7 +11,7 @@
                     <v-radio-item v-model="value" :options="['男士',{
                                     label: '女士',
                                     value: '女士'
-                                }]" @change="change"></v-radio-item>
+                                },'公公']" @change="change"></v-radio-item>
                     <div slot="footer" v-if="value.length>0">{{value}}</div>
                 </v-list>
             </div>
@@ -28,22 +28,13 @@ export default {
             value2: [],
             options: [
                 {
-                    label: 'disabled option',
-                    value: 'valueF',
-                    // disabled: true
+                    label: 'radio1',
+                    value: 'radio1',
                 },
                 {
-                    label: 'checked disabled',
-                    value: 'valueE',
+                    label: 'radio2',
+                    value: 'radio2',
                 },
-                {
-                    label: 'optionA',
-                    value: 'valueA'
-                },
-                {
-                    label: 'optionB',
-                    value: 'valueB'
-                }
             ]
         }
     },

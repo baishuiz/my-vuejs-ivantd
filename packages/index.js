@@ -18,7 +18,7 @@ import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
 import modal from './components/modal';
 import { checkbox, checkboxItem } from './components/checkbox';
-import { radio, radioItem } from './components/radio';
+import { radioItem } from './components/radio';
 import vSwitch from './components/switch';
 
 // import locale from './locale';
@@ -45,7 +45,6 @@ const components = {
     modal,
     checkbox,
     checkboxItem,
-    radio,
     radioItem,
     vSwitch
 };
@@ -101,7 +100,6 @@ export {
     modal,
     checkbox,
     checkboxItem,
-    radio,
     radioItem,
     vSwitch
 };

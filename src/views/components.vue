@@ -83,6 +83,16 @@
                         link: {
                             path: 'button'
                         },
+                    },{
+                       name: 'Switch 滑动开关',
+                        link: {
+                            path: 'switch'
+                        }, 
+                    },{
+                       name: 'Radio 单选框',
+                        link: {
+                            path: 'radio'
+                        }, 
                     }],
                 }, {
                     groupName: '数据展示 Data Display',
