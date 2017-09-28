@@ -91,3 +91,4 @@ export default [{
     name: 'popup',
     component: resolve => require(['./component/popupDemo.vue'], resolve),
 }];
+
