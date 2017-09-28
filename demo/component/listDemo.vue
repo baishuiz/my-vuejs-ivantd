@@ -32,7 +32,7 @@
                  </v-list>
                  <v-list>
                      <div slot="header">Basic</div>
-                     <v-list-item align="middle" arrow="horizontal">
+                     <v-list-item align="middle" arrow="horizontal" :active="true">
                         <div slot="thumb" >
                             <v-icon type="loading"></v-icon>
                         </div>

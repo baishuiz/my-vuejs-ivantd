@@ -13,13 +13,19 @@ import grid from './components/grid';
 import { list, listItem } from './components/list';
 import { card, cardHeader, cardBody, cardFooter } from './components/card';
 import progress from './components/progress';
+import loadingBar from './components/loading-bar';
 import toast from './components/toast';
 import activityIndicator from './components/activity-indicator';
 import badge from './components/badge';
 import modal from './components/modal';
 import { checkbox, checkboxItem } from './components/checkbox';
+
 import { radioItem } from './components/radio';
 import vSwitch from './components/switch';
+import { tabs, tabItem, tabPane, tabPaneItem } from './components/tabs';
+import imagePicker from './components/image-picker';
+import pickerView from './components/picker-view';
+import popup from './components/popup';
 
 // import locale from './locale';
 import { version } from '../package.json';
@@ -46,7 +52,15 @@ const components = {
     checkbox,
     checkboxItem,
     radioItem,
-    vSwitch
+    vSwitch,
+    loadingBar,
+    tabs,
+    tabItem,
+    tabPane,
+    tabPaneItem,
+    imagePicker,
+    pickerView,
+    popup,
 };
 
 for (const item of Object.values(components)) {
@@ -69,7 +83,7 @@ const install = function (Vue, opts = {}) {
     }
 
     // 注册全局
-    Vue.$progress = Vue.prototype.$progress = progress;
+    Vue.$loadingBar = Vue.prototype.$loadingBar = loadingBar;
     Vue.$toast = Vue.prototype.$toast = toast;
     Vue.$modal = Vue.prototype.$modal = modal;
 };
@@ -101,7 +115,15 @@ export {
     checkbox,
     checkboxItem,
     radioItem,
-    vSwitch
+    vSwitch,
+    loadingBar,
+    tabs,
+    tabItem,
+    tabPane,
+    tabPaneItem,
+    imagePicker,
+    pickerView,
+    popup,
 };
 
 export default {
