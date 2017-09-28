@@ -20,7 +20,7 @@ import badge from './components/badge';
 import modal from './components/modal';
 import { checkbox, checkboxItem } from './components/checkbox';
 
-import { radioItem } from './components/radio';
+import { radio, radioItem } from './components/radio';
 import vSwitch from './components/switch';
 import { tabs, tabItem, tabPane, tabPaneItem } from './components/tabs';
 import imagePicker from './components/image-picker';
@@ -61,6 +61,7 @@ const components = {
     imagePicker,
     pickerView,
     popup,
+    radio,
 };
 
 for (const item of Object.values(components)) {
@@ -124,6 +125,7 @@ export {
     imagePicker,
     pickerView,
     popup,
+    radio,
 };
 
 export default {

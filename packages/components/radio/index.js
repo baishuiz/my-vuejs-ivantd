@@ -1,4 +1,5 @@
 import './style/index.less';
+import radio from './radio';
 import radioItem from './radio-item';
 
-export { radioItem };
+export { radio, radioItem };

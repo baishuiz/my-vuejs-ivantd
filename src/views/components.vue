@@ -22,22 +22,24 @@
                     link: {
                         path: 'start'
                     },
-                }, {
-                    name: '快速上手',
-                    link: {
-                        path: 'css'
-                    },
-                }, {
-                    name: '国际化',
-                    link: {
-                        path: 'polyfill'
-                    },
-                }, {
-                    name: '组件预览',
-                    link: {
-                        path: 'contribute'
-                    },
-                }, {
+                }
+                // , {
+                //     name: '快速上手',
+                //     link: {
+                //         path: 'css'
+                //     },
+                // }, {
+                //     name: '国际化',
+                //     link: {
+                //         path: 'polyfill'
+                //     },
+                // }, {
+                //     name: '组件预览',
+                //     link: {
+                //         path: 'contribute'
+                //     },
+                // }
+                , {
                     name: '参与贡献',
                     link: {
                         path: 'contribute'
@@ -71,9 +73,14 @@
                 }, {
                     groupName: '导航 Navigation',
                     list: [{
-                        name: 'TabBar 标签栏',
+                        name: 'Tabs 标签',
                         link: {
-                            path: 'tabbar'
+                            path: 'tabs'
+                        },
+                    },{
+                        name: 'Popup 弹出层',
+                        link: {
+                            path: 'popup'
                         },
                     }],
                 }, {
@@ -92,6 +99,11 @@
                        name: 'Radio 单选框',
                         link: {
                             path: 'radio'
+                        }, 
+                    },{
+                       name: 'Checkbox 复选框',
+                        link: {
+                            path: 'checkbox'
                         }, 
                     }],
                 }, {
@@ -130,6 +142,11 @@
                             path: 'progress'
                         },
                     },{
+                        name: 'LoadingBar 加载进度条',
+                        link: {
+                            path: 'loadingBar'
+                        },
+                    },{
                         name: 'ActivityIndicator 活动指示器',
                         link: {
                             path: 'activityIndicator'
@@ -138,6 +155,11 @@
                         name: 'Toast 轻提示',
                         link: {
                             path: 'toast'
+                        },
+                    },{
+                        name: 'Modal 提示窗口',
+                        link: {
+                            path: 'modal'
                         },
                     }],
                 }],

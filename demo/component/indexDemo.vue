@@ -51,10 +51,12 @@ const dataList = [{
     }]
 },{
     name: '导航 Navigation',
-    children: [{
-        name: 'TabBar 标签栏',
-        path: 'tabbar',
-    },{
+    children: [
+    //     {
+    //     name: 'TabBar 标签栏',
+    //     path: 'tabbar',
+    // },
+    {
         name: 'Tabs 标签',
         path: 'tabs',
     }, {
@@ -70,12 +72,21 @@ const dataList = [{
         name: 'Checkbox 复选框',
         path: 'checkbox',
     },{
-        name: 'ImagePicker 图片选择上传',
-        path: 'imagePicker',
+        name: 'Radio 单选选框',
+        path: 'radio',
     },{
-        name: 'PickerView',
-        path: 'pickerView',
-    }]
+        name: 'Switch 单选选框',
+        path: 'switch',
+    }
+    // ,{
+    //     name: 'ImagePicker 图片选择上传',
+    //     path: 'imagePicker',
+    // }
+    // ,{
+    //     name: 'PickerView',
+    //     path: 'pickerView',
+    // }
+    ]
 }, {
     name: '数据展示 Data Display',
     children: [{

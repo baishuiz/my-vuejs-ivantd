@@ -148,7 +148,7 @@ export default {
             let style = {};
             const width = parseInt(this.width);
             const styleWidth = {
-                width: width <= 100 ? `${width}%` : `${width}px`
+                width: width <= 100 ? `${width}%` : `${width/100}rem`
             };
             const customStyle = this.styles ? this.styles : {};
             Object.assign(style, styleWidth, customStyle);

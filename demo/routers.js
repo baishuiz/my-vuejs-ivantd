@@ -90,5 +90,13 @@ export default [{
     path: '/popup',
     name: 'popup',
     component: resolve => require(['./component/popupDemo.vue'], resolve),
+}, {
+    path: '/radio',
+    name: 'radio',
+    component: resolve => require(['./component/radioDemo.vue'], resolve),
+}, {
+    path: '/switch',
+    name: 'switch',
+    component: resolve => require(['./component/switchDemo.vue'], resolve),
 }];
 

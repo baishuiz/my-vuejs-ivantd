@@ -1,21 +1,19 @@
 <template>
-    <div :class="`${prefixCls}-agree`" @change="$emit('change', currentValue)">
-        <label :class="`${prefixCls}-wrapper ${prefixCls}-agree-label` ">
+        <label :class="`${prefixCls}-wrapper` " @change="$emit('change', currentValue)">
             <span :class="[`${prefixCls}`,{[`${prefixCls}-disabled`]:disabled,[`${prefixCls}-checked`]: currentValue}]">
                 <span :class="`${prefixCls}-inner`"></span>
-                <input type="checkbox" :class="`${prefixCls}-input`" :disabled="disabled" :value="value" v-model="currentValue">
+                <input type="radio" :class="`${prefixCls}-input`" :disabled="disabled" :value="value" v-model="currentValue">
             </span>
             <slot></slot>
         </label>
-    </div>
 </template>
 
 <script>
 export default {
-    name: 'Checkbox',
+    name: 'Radio',
     data: function() {
         return {
-            prefixCls: 'am-checkbox',
+            prefixCls: 'am-radio',
             currentValue: this.value,
         }
     },

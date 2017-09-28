@@ -106,5 +106,25 @@ export default [
             path: 'radio',
             name: 'radio',
             component: resolve => require(['./docs/zh-cn/radio.md'], resolve),
+        }, {
+            path: 'tabs',
+            name: 'tabs',
+            component: resolve => require(['./docs/zh-cn/tabs.md'], resolve),
+        }, {
+            path: 'popup',
+            name: 'popup',
+            component: resolve => require(['./docs/zh-cn/popup.md'], resolve),
+        }, {
+            path: 'checkbox',
+            name: 'checkbox',
+            component: resolve => require(['./docs/zh-cn/checkbox.md'], resolve),
+        }, {
+            path: 'modal',
+            name: 'modal',
+            component: resolve => require(['./docs/zh-cn/modal.md'], resolve),
+        }, {
+            path: 'loadingBar',
+            name: 'loadingBar',
+            component: resolve => require(['./docs/zh-cn/loadingBar.md'], resolve),
         }],
     }];
