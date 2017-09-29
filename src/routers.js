@@ -25,6 +25,10 @@ export default [
                 name: 'safety',
                 component: resolve => require(['./docs/zh-cn/safety.md'], resolve),
             }, {
+                path: 'tech',
+                name: 'tech',
+                component: resolve => require(['./docs/zh-cn/tech.md'], resolve),
+            }, {
                 path: 'color',
                 name: 'color',
                 component: resolve => require(['./docs/zh-cn/color.md'], resolve),
@@ -36,6 +40,22 @@ export default [
                 path: 'icon',
                 name: 'icon',
                 component: resolve => require(['./docs/zh-cn/icon.md'], resolve),
+            }, {
+                path: 'buttonDoc',
+                name: 'buttonDoc',
+                component: resolve => require(['./docs/zh-cn/buttonDoc.md'], resolve),
+            }, {
+                path: 'biz05',
+                name: 'biz05',
+                component: resolve => require(['./docs/zh-cn/biz05.md'], resolve),
+            }, {
+                path: 'biz06',
+                name: 'biz06',
+                component: resolve => require(['./docs/zh-cn/biz06.md'], resolve),
+            }, {
+                path: 'biz07',
+                name: 'biz07',
+                component: resolve => require(['./docs/zh-cn/biz07.md'], resolve),
             },
         ],
     }, {
@@ -46,6 +66,10 @@ export default [
             path: 'start',
             name: 'start',
             component: resolve => require(['./docs/zh-cn/start.md'], resolve),
+        }, {
+            path: 'contribute',
+            name: 'contribute',
+            component: resolve => require(['./docs/zh-cn/contribute.md'], resolve),
         }, {
             path: 'button',
             name: 'button',

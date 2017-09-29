@@ -85,9 +85,9 @@ export default {
                     path: 'safety'
                 },
             }, {
-                name: '科技金融-超越',
+                name: '科技金融-超前',
                 link: {
-                    path: 'safety1'
+                    path: 'tech'
                 },
             }],
         }, {
@@ -106,29 +106,35 @@ export default {
                 path: 'icon'
             },
         }, {
+            name: 'Button 按钮',
+            link: {
+                path: 'buttonDoc'
+            },
+        }, {
             name: '业务组合',
             groups: [{
-                groupName: '金融',
+                groupName: '基础',
                 list: [{
-                    name: '保险类',
-                    link: { path: 'button1' },
+                    name: '常用控件',
+                    link: { path: 'biz05' },
                 }, {
-                    name: '理财类',
-                    link: { path: 'icon2' },
+                    name: '组合样式',
+                    link: { path: 'biz06' },
                 }, {
-                    name: '征信类',
-                    link: { path: 'icon3' },
+                    name: '业务组合',
+                    link: { path: 'biz07' },
                 }],
-            }, {
-                groupName: '生活',
-                list: [{
-                    name: '购物',
-                    link: { path: 'button4' },
-                }, {
-                    name: '运动',
-                    link: { path: 'icon55' },
-                }],
-            }],
+            }]
+            // , {
+            //     groupName: '生活',
+            //     list: [{
+            //         name: '购物',
+            //         link: { path: 'button4' },
+            //     }, {
+            //         name: '运动',
+            //         link: { path: 'icon55' },
+            //     }],
+            // }],
         }],
     }),
     mounted: function() {
