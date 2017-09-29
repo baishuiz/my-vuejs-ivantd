@@ -111,20 +111,36 @@ export default {
                 path: 'buttonDoc'
             },
         }, {
+            name: '常用控件',
+            link: {
+                path: 'biz05'
+            },
+        }, {
+            name: '组合样式',
+            link: {
+                path: 'biz06'
+            },
+        }, {
             name: '业务组合',
-            groups: [{
-                groupName: '基础',
-                list: [{
-                    name: '常用控件',
-                    link: { path: 'biz05' },
-                }, {
-                    name: '组合样式',
-                    link: { path: 'biz06' },
-                }, {
-                    name: '业务组合',
-                    link: { path: 'biz07' },
-                }],
-            }]
+            link: {
+                path: 'biz07'
+            },
+        }
+        // , {
+            // name: '业务组合',
+            // groups: [{
+            //     groupName: '基础',
+            //     list: [{
+            //         name: '常用控件',
+            //         link: { path: 'biz05' },
+            //     }, {
+            //         name: '组合样式',
+            //         link: { path: 'biz06' },
+            //     }, {
+            //         name: '业务组合',
+            //         link: { path: 'biz07' },
+            //     }],
+            // }]
             // , {
             //     groupName: '生活',
             //     list: [{
@@ -135,7 +151,8 @@ export default {
             //         link: { path: 'icon55' },
             //     }],
             // }],
-        }],
+        // }
+        ],
     }),
     mounted: function() {
         this.$nextTick(function() {
